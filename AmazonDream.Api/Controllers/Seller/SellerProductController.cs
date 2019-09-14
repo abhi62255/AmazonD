@@ -74,8 +74,8 @@ namespace AmazonDream.Api.Controllers.Seller
             return obj.GetProductsPending(id);
         }
 
-        // GET: api/SellerProduct/active/1
-        [HttpGet("Active/{id}")]
+        // GET: api/SellerProduct/accepted/1
+        [HttpGet("Accepted/{id}")]
         public List<ProductModel> GetProductsActive(long id)       //Get product by sellerID
         {
             return obj.GetProductsActive(id);

@@ -1,0 +1,15 @@
+<p>add-product!</p>
+
+<form (ngSubmit)="addProduct(f)" #f=ngForm>
+  <input type="text" name="ProductName" placeholder="Product Name" ngModel />
+  <input type="number" name="ProductPrice" placeholder="Product Price" ngModel />
+  <input type="number" name="ProductQuantity" placeholder="Product Quantity" ngModel />
+  <input type="number" name="ProductDiscount" placeholder="Product Discount" ngModel />
+  <input type="text" name="ProductCategory" placeholder="Product Category" ngModel />
+  <input type="text" name="ProductSubCategory" placeholder="Product Sub-Category" ngModel />
+  <input type="text" name="ProductBrand" placeholder="Product Brand" ngModel />
+  <input type="text" name="ProductGenderType" placeholder="Product Gender Type" ngModel />
+  <input type="text" name="ProductDescription" placeholder="Product Descrption" ngModel />
+  <input type="hidden" name="Seller_ID" ngModel />
+  <button type="submit" value="submit">Add Product</button>
+</form>

@@ -27,7 +27,7 @@ namespace AmazonDream.DAL
         }
         public List<Product> GetProductsActive(long id)         //get Active product by seller ID
         {
-            return (db.Product.Where(p => p.Seller_ID == id && p.ProductStatus == "Active").ToList());
+            return (db.Product.Where(p => p.Seller_ID == id && p.ProductStatus == "Accepted").ToList());
         }
         public List<Product> GetProductsTrending(string value,long id)         //get Trending or non trending product by seller ID
         {

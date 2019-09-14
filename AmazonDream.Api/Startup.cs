@@ -40,6 +40,8 @@ namespace AmazonDream.Api
             var connection = @"Server=XIPL9378\SQLEXPRESS;Database=AmazonDreamDatabase;Trusted_Connection=True;";
             services.AddDbContext<AmazonDreamDbContext>(options => options.UseSqlServer(connection));
 
+            services.AddCors();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,8 +56,16 @@ namespace AmazonDream.Api
                 app.UseHsts();
             }
 
+
+
+
             app.UseHttpsRedirection();
             app.UseMvc();
+            app.UseCors(builder => builder.WithOrigins("http://localhost:4200")
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowCredentials());
         }
     }
 }

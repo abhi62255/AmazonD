@@ -1,0 +1,7 @@
+<p>seller-registration</p>
+<form (ngSubmit) ="addSeller(f)" #f= ngForm>
+  <input type="text" name="Name" placeholder="Seller Name" ngModel />
+  <input type="email" name="Email" placeholder="Email" ngModel/>
+  <input type="password" name="Password" placeholder="Password" ngModel/>
+  <button type="submit" value="Register">Register</button>
+</form>
