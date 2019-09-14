@@ -1,0 +1,70 @@
+C:\Users\asharma1\source\repos\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.DAL.deps.json
+C:\Users\asharma1\source\repos\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.DAL.dll
+C:\Users\asharma1\source\repos\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.DAL.pdb
+C:\Users\asharma1\source\repos\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Entities.dll
+C:\Users\asharma1\source\repos\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Entities.pdb
+C:\Users\asharma1\source\repos\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.csprojAssemblyReference.cache
+C:\Users\asharma1\source\repos\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.csproj.CoreCompileInputs.cache
+C:\Users\asharma1\source\repos\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.AssemblyInfoInputs.cache
+C:\Users\asharma1\source\repos\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.AssemblyInfo.cs
+C:\Users\asharma1\source\repos\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.csproj.CopyComplete
+C:\Users\asharma1\source\repos\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.dll
+C:\Users\asharma1\source\repos\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.pdb
+C:\Users\asharma1\source\repos\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\asharma1\source\repos\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\Users\sraut\Downloads\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.csprojAssemblyReference.cache
+C:\Users\sraut\Downloads\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.csproj.CoreCompileInputs.cache
+C:\Users\sraut\Downloads\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.AssemblyInfoInputs.cache
+C:\Users\sraut\Downloads\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.AssemblyInfo.cs
+C:\Users\sraut\Downloads\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.dll
+C:\Users\sraut\Downloads\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.pdb
+C:\Users\sraut\Downloads\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.DAL.deps.json
+C:\Users\sraut\Downloads\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.DAL.dll
+C:\Users\sraut\Downloads\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.DAL.pdb
+C:\Users\sraut\Downloads\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Entities.dll
+C:\Users\sraut\Downloads\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\sraut\Downloads\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Entities.pdb
+C:\Users\sraut\Downloads\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\Users\sraut\Downloads\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.csproj.CopyComplete
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.DAL.deps.json
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.DAL.dll
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.DAL.pdb
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Entities.dll
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Entities.pdb
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.csprojAssemblyReference.cache
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.csproj.CoreCompileInputs.cache
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.AssemblyInfoInputs.cache
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.AssemblyInfo.cs
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.csproj.CopyComplete
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.dll
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.pdb
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Common.dll
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Common.pdb
+D:\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.DAL.deps.json
+D:\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.DAL.dll
+D:\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.DAL.pdb
+D:\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Common.dll
+D:\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Entities.dll
+D:\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Common.pdb
+D:\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Entities.pdb
+D:\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.csprojAssemblyReference.cache
+D:\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.csproj.CoreCompileInputs.cache
+D:\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.AssemblyInfoInputs.cache
+D:\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.AssemblyInfo.cs
+D:\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.csproj.CopyComplete
+D:\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.dll
+D:\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.pdb
+D:\Sagar Rout\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.DAL.deps.json
+D:\Sagar Rout\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.DAL.dll
+D:\Sagar Rout\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.DAL.pdb
+D:\Sagar Rout\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Common.dll
+D:\Sagar Rout\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Entities.dll
+D:\Sagar Rout\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Common.pdb
+D:\Sagar Rout\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Entities.pdb
+D:\Sagar Rout\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.csprojAssemblyReference.cache
+D:\Sagar Rout\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.csproj.CoreCompileInputs.cache
+D:\Sagar Rout\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.AssemblyInfoInputs.cache
+D:\Sagar Rout\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.AssemblyInfo.cs
+D:\Sagar Rout\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.csproj.CopyComplete
+D:\Sagar Rout\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.dll
+D:\Sagar Rout\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.pdb

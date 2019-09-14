@@ -1,0 +1,27 @@
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.Models\bin\Debug\netcoreapp2.1\AmazonDream.ViewModels.deps.json
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.Models\bin\Debug\netcoreapp2.1\AmazonDream.ViewModels.dll
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.Models\bin\Debug\netcoreapp2.1\AmazonDream.ViewModels.pdb
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.Models\obj\Debug\netcoreapp2.1\AmazonDream.ViewModels.csprojAssemblyReference.cache
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.Models\obj\Debug\netcoreapp2.1\AmazonDream.ViewModels.csproj.CoreCompileInputs.cache
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.Models\obj\Debug\netcoreapp2.1\AmazonDream.ViewModels.AssemblyInfoInputs.cache
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.Models\obj\Debug\netcoreapp2.1\AmazonDream.ViewModels.AssemblyInfo.cs
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.Models\obj\Debug\netcoreapp2.1\AmazonDream.ViewModels.dll
+D:\Sagar Rout\AmazonDreamSolution\AmazonDream.Models\obj\Debug\netcoreapp2.1\AmazonDream.ViewModels.pdb
+D:\AmazonDream-master\AmazonDream.Models\bin\Debug\netcoreapp2.1\AmazonDream.ViewModels.deps.json
+D:\AmazonDream-master\AmazonDream.Models\bin\Debug\netcoreapp2.1\AmazonDream.ViewModels.dll
+D:\AmazonDream-master\AmazonDream.Models\bin\Debug\netcoreapp2.1\AmazonDream.ViewModels.pdb
+D:\AmazonDream-master\AmazonDream.Models\obj\Debug\netcoreapp2.1\AmazonDream.ViewModels.csprojAssemblyReference.cache
+D:\AmazonDream-master\AmazonDream.Models\obj\Debug\netcoreapp2.1\AmazonDream.ViewModels.csproj.CoreCompileInputs.cache
+D:\AmazonDream-master\AmazonDream.Models\obj\Debug\netcoreapp2.1\AmazonDream.ViewModels.AssemblyInfoInputs.cache
+D:\AmazonDream-master\AmazonDream.Models\obj\Debug\netcoreapp2.1\AmazonDream.ViewModels.AssemblyInfo.cs
+D:\AmazonDream-master\AmazonDream.Models\obj\Debug\netcoreapp2.1\AmazonDream.ViewModels.dll
+D:\AmazonDream-master\AmazonDream.Models\obj\Debug\netcoreapp2.1\AmazonDream.ViewModels.pdb
+D:\Sagar Rout\AmazonDream-master\AmazonDream.Models\bin\Debug\netcoreapp2.1\AmazonDream.ViewModels.deps.json
+D:\Sagar Rout\AmazonDream-master\AmazonDream.Models\bin\Debug\netcoreapp2.1\AmazonDream.ViewModels.dll
+D:\Sagar Rout\AmazonDream-master\AmazonDream.Models\bin\Debug\netcoreapp2.1\AmazonDream.ViewModels.pdb
+D:\Sagar Rout\AmazonDream-master\AmazonDream.Models\obj\Debug\netcoreapp2.1\AmazonDream.ViewModels.csprojAssemblyReference.cache
+D:\Sagar Rout\AmazonDream-master\AmazonDream.Models\obj\Debug\netcoreapp2.1\AmazonDream.ViewModels.csproj.CoreCompileInputs.cache
+D:\Sagar Rout\AmazonDream-master\AmazonDream.Models\obj\Debug\netcoreapp2.1\AmazonDream.ViewModels.AssemblyInfoInputs.cache
+D:\Sagar Rout\AmazonDream-master\AmazonDream.Models\obj\Debug\netcoreapp2.1\AmazonDream.ViewModels.AssemblyInfo.cs
+D:\Sagar Rout\AmazonDream-master\AmazonDream.Models\obj\Debug\netcoreapp2.1\AmazonDream.ViewModels.dll
+D:\Sagar Rout\AmazonDream-master\AmazonDream.Models\obj\Debug\netcoreapp2.1\AmazonDream.ViewModels.pdb

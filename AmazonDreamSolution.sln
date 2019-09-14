@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmazonDream.Api", "AmazonDream.Api\AmazonDream.Api.csproj", "{9D02FF6E-C51A-41F7-A239-BBD523A0AEFB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmazonDream.DAL", "AmazonDream.DAL\AmazonDream.DAL.csproj", "{912D6773-7915-4F4E-895E-BF3BD2202383}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmazonDream.Entities", "AmazonDream.Entities\AmazonDream.Entities.csproj", "{BF829798-E5A3-41B2-A0F8-F8BF99B3DC47}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmazonDream.ViewModels", "AmazonDream.Models\AmazonDream.ViewModels.csproj", "{8CD35691-D4A6-49A9-A795-924A52F9B5BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmazonDream.BLL", "AmazonDream.BLL\AmazonDream.BLL.csproj", "{8E6B7492-4265-4C75-86FB-330464714DCE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmazonDream.Common", "AmazonDream.Common\AmazonDream.Common.csproj", "{DFBCA3FD-93FD-49DD-8C0B-74D546C3DF26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmazonDream.Web", "AmazonDream.Web\AmazonDream.Web.csproj", "{6A7D24A8-F7FD-495F-953A-E595DAEFFDBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D02FF6E-C51A-41F7-A239-BBD523A0AEFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D02FF6E-C51A-41F7-A239-BBD523A0AEFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D02FF6E-C51A-41F7-A239-BBD523A0AEFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D02FF6E-C51A-41F7-A239-BBD523A0AEFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{912D6773-7915-4F4E-895E-BF3BD2202383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{912D6773-7915-4F4E-895E-BF3BD2202383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{912D6773-7915-4F4E-895E-BF3BD2202383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{912D6773-7915-4F4E-895E-BF3BD2202383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF829798-E5A3-41B2-A0F8-F8BF99B3DC47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF829798-E5A3-41B2-A0F8-F8BF99B3DC47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF829798-E5A3-41B2-A0F8-F8BF99B3DC47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF829798-E5A3-41B2-A0F8-F8BF99B3DC47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CD35691-D4A6-49A9-A795-924A52F9B5BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CD35691-D4A6-49A9-A795-924A52F9B5BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CD35691-D4A6-49A9-A795-924A52F9B5BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CD35691-D4A6-49A9-A795-924A52F9B5BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E6B7492-4265-4C75-86FB-330464714DCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E6B7492-4265-4C75-86FB-330464714DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E6B7492-4265-4C75-86FB-330464714DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E6B7492-4265-4C75-86FB-330464714DCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFBCA3FD-93FD-49DD-8C0B-74D546C3DF26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFBCA3FD-93FD-49DD-8C0B-74D546C3DF26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFBCA3FD-93FD-49DD-8C0B-74D546C3DF26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFBCA3FD-93FD-49DD-8C0B-74D546C3DF26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A7D24A8-F7FD-495F-953A-E595DAEFFDBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A7D24A8-F7FD-495F-953A-E595DAEFFDBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A7D24A8-F7FD-495F-953A-E595DAEFFDBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A7D24A8-F7FD-495F-953A-E595DAEFFDBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C5889CD-66C7-4416-B278-026693DABD81}
+	EndGlobalSection
+EndGlobal
