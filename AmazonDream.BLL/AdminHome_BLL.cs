@@ -13,6 +13,7 @@ namespace AmazonDream.BLL
     {
         ProductDA _productDA = new ProductDA();
         SellerDA _sellerDA = new SellerDA();
+        AddressDA _addressDA = new AddressDA();
 
         private readonly IMapper _mapper;
         public AdminHome_BLL(IMapper mapper)
@@ -38,19 +39,20 @@ namespace AmazonDream.BLL
         {
 
             var model = new List<SellerModel>();
+
             var entity = _sellerDA.GetSellerByStatus(value);
 
             foreach (var i in entity)
             {
+               
                 model.Add(_mapper.Map<Seller, SellerModel>(i));
             }
-
             return (model);
         }
 
         public Boolean PutSeller(string value,long id)            //Respond to seller Request :Accepted:Deleted
         {
-            if (!(value == "Accepted" || value == "Deleted" || value == "accepted" || value == "deleted"))      //check for the if it is valid or not
+            if (!(value == "Accepted" || value == "Deleted" || value == "accepted" || value == "deleted" || value == "Pending" || value == "pending"))      //check for the if it is valid or not
                 return false;
 
             var entity = _sellerDA.GetSellerByID(id);     //getting the seller by ID
@@ -69,7 +71,7 @@ namespace AmazonDream.BLL
 
         public Boolean PutProduct(string value, long id)            //Respond to seller Request :Accepted:Deleted
         {
-            if (!(value == "Accepted" || value == "Deleted" || value == "accepted" || value == "deleted"))      //check for the "value" if it is valid or not
+            if (!(value == "Accepted" || value == "Deleted" || value == "accepted" || value == "deleted" || value == "Pending" || value == "pending"))      //check for the "value" if it is valid or not
                 return false;
 
             var entity = _productDA.GetProduct(id);     //getting the Product by ID

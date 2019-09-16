@@ -1,0 +1,10 @@
+<p>view-product works!</p>
+<li *ngFor="let product of productList">
+  {{product | json}}
+
+  <button (click)="respondProduct('Pending',product.id)">Suspend</button>
+  <button (click)="respondProduct('Deleted',product.id)">Delete</button>
+  <button (click)="trendProduct(product.id)">Product Trend</button>
+
+
+</li>

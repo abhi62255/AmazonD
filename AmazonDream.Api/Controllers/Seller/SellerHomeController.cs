@@ -19,10 +19,12 @@ namespace AmazonDream.Api.Controllers
     {
         private Registration_BLL obj;
         private SellerHome_BLL _sellerHome_BLL;
+        private Address_BLL _address_BLL;
         public  SellerHomeController(IMapper mapper)
         {
             obj = new Registration_BLL(mapper);
             _sellerHome_BLL = new SellerHome_BLL(mapper);
+            _address_BLL = new Address_BLL(mapper);
         }
 
         // POST: api/sellerhome
@@ -54,7 +56,6 @@ namespace AmazonDream.Api.Controllers
         {
             return _sellerHome_BLL.UpdateStatus(status, id);
         }
-
 
     }
 }

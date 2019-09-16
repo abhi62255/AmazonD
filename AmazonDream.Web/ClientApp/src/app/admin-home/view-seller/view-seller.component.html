@@ -1,0 +1,8 @@
+<p>view-seller works!</p>
+<li *ngFor="let seller of sellerList">
+  {{seller | json}}
+
+  <button (click)="sellerStatus('Pending',seller.id)">Suspend</button>
+  <button (click)="sellerStatus('Deleted',seller.id)">Delete</button>
+
+</li>

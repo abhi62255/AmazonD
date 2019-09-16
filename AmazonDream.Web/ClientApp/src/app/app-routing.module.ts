@@ -14,6 +14,11 @@ import { AddProductPictureComponent } from './seller-home/add-product-picture/ad
 import { EditProductValuesComponent } from './seller-home/view-all-product/edit-product-values/edit-product-values.component';
 import { ReceivedOrderComponent } from './seller-home/received-order/received-order.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { SellerRequestsComponent } from './admin-home/seller-requests/seller-requests.component';
+import { ViewSellerComponent } from './admin-home/view-seller/view-seller.component';
+import { ViewProductComponent } from './admin-home/view-product/view-product.component';
+import { PendingProductComponent } from './admin-home/pending-product/pending-product.component';
+import { TrendingProductComponent } from './admin-home/trending-product/trending-product.component';
 
 
 const routes: Routes = [
@@ -36,7 +41,17 @@ const routes: Routes = [
     ]
   },
   { path: 'SellerHome/ViewProduct/UpdateValues', component: EditProductValuesComponent },
-  { path: 'AdminHome', component: AdminHomeComponent }
+  {
+    path: 'AdminHome', component: AdminHomeComponent,
+    children: [
+      { path: 'SellerRequest', component: SellerRequestsComponent },
+      { path: 'ViewSeller', component: ViewSellerComponent },
+      { path: 'ViewProduct', component: ViewProductComponent },
+      { path: 'PendingProduct', component: PendingProductComponent },
+      { path: 'TrendingProduct', component: TrendingProductComponent }
+
+    ]
+  }
 
 ];
 

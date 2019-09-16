@@ -49,6 +49,10 @@ namespace AmazonDream.BLL
             CreateMap<PlacedOrder, RecivedOrderModel>();
             CreateMap<RecivedOrderModel, PlacedOrder>();
 
+            CreateMap<Seller_AddressModel, Seller>();
+            CreateMap<Seller, Seller_AddressModel>();
+            CreateMap<Seller_AddressModel, Address>();
+            CreateMap<Address, Seller_AddressModel>();
 
 
 

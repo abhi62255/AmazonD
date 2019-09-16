@@ -1,0 +1,8 @@
+<p>seller-requests works!</p>
+<li *ngFor="let seller of sellerList">
+  {{seller | json}}
+
+  <button (click)="respondSellerRequest('Accepted',seller.id)">Accept</button>
+  <button (click)="respondSellerRequest('Deleted',seller.id)">Delete</button>
+
+</li>

@@ -24,6 +24,11 @@ import { ViewTrendRequestedProductComponent } from './seller-home/view-trend-req
 import { AddProductPictureComponent } from './seller-home/add-product-picture/add-product-picture.component';
 import { EditProductValuesComponent } from './seller-home/view-all-product/edit-product-values/edit-product-values.component';
 import { ReceivedOrderComponent } from './seller-home/received-order/received-order.component';
+import { SellerRequestsComponent } from './admin-home/seller-requests/seller-requests.component';
+import { ViewProductComponent } from './admin-home/view-product/view-product.component';
+import { PendingProductComponent } from './admin-home/pending-product/pending-product.component';
+import { ViewSellerComponent } from './admin-home/view-seller/view-seller.component';
+import { TrendingProductComponent } from './admin-home/trending-product/trending-product.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +46,12 @@ import { ReceivedOrderComponent } from './seller-home/received-order/received-or
     ViewTrendRequestedProductComponent,
     AddProductPictureComponent,
     EditProductValuesComponent,
-    ReceivedOrderComponent
+    ReceivedOrderComponent,
+    SellerRequestsComponent,
+    ViewProductComponent,
+    PendingProductComponent,
+    ViewSellerComponent,
+    TrendingProductComponent
   ],
   imports: [
     BrowserModule,

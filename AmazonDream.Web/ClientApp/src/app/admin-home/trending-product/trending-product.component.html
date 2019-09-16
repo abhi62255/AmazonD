@@ -1,0 +1,7 @@
+<p>trending-product works!</p>
+<li *ngFor="let product of productList">
+  {{product | json}}
+
+  <button (click)="productTrend(product.id)" type="submit">Delete</button>
+
+</li>

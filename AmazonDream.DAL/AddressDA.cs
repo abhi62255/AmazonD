@@ -20,6 +20,10 @@ namespace AmazonDream.DAL
         {
             return db.Address.Where(a => a.Seller_ID == id).ToList();
         }
+        public Address GetAddressSellerOne(long id)            //getting Seller address by seller ID one
+        {
+            return db.Address.Where(a => a.Seller_ID == id).FirstOrDefault();
+        }
         public Address GetAddress(long id)              //getting Address by address ID
         {
             return db.Address.Where(a => a.ID == id).FirstOrDefault();

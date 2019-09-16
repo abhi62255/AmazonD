@@ -1,0 +1,8 @@
+<p>pending-product works!</p>
+<li *ngFor="let product of productList">
+  {{product | json}}
+
+  <button (click)="respondProductRequest('Accepted',product.id)" type="submit">Accept</button>
+  <button (click)="respondProductRequest('Deleted',product.id)" type="submit">Delete</button>
+
+</li>

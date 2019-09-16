@@ -62,4 +62,22 @@ export class ProductService {
     values.ID = this._constant.Product_ID;
     return this.http.put(this._constant.baseUrl + 'sellerproduct/updatevalues', values);    //Update Product Values
   }
+
+  getProduct(status: string): Observable<any>{
+    return this.http.get(this._constant.baseUrl + 'AdminHome/product/' + status);    //Give all product by status
+  }
+
+  respondProductRequest(status: string, id: number) {
+    return this.http.put(this._constant.baseUrl + 'AdminHome/product/' + status + '/' + id, null);    //Respond to product Request
+
+  }
+
+  trendProduct(status: string, id: number) {
+    return this.http.put(this._constant.baseUrl + 'AdminHome/TrendResponse/' + status + '/' + id, null);    //Respond to product Request
+  }
+
+  getTrendingProductsAll(): Observable<any> {
+    return this.http.get(this._constant.baseUrl + 'AdminHome/ProductTrend');    //Give all Trending products
+  }
+
 }
