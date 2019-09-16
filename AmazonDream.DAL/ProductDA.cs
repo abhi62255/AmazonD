@@ -71,11 +71,11 @@ namespace AmazonDream.DAL
 
 
 
-        public Boolean AddProduct(Product entity)       //add Product 
+        public long AddProduct(Product entity)       //add Product 
         {
             db.Product.Add(entity);
             db.SaveChanges();
-            return true;
+            return entity.ID;
 
         }
 

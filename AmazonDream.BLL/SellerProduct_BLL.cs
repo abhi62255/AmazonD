@@ -19,18 +19,15 @@ namespace AmazonDream.BLL
         }
 
 
-        public Boolean AddProduct(ProductModel model)       //Add Product 
+        public long AddProduct(ProductModel model)       //Add Product 
         {
             var entity = _mapper.Map<ProductModel, Product>(model);
             entity.ProductStatus = "Pending";
             entity.ProductQuantityInKart = 0;
             entity.ProductTrend = "False";
 
-            if(obj.AddProduct(entity))
-            {
-                return true;
-            }
-            return false;
+            var id = obj.AddProduct(entity);
+            return id;
 
         }
 

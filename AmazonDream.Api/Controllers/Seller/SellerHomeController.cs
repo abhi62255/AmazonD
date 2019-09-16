@@ -18,9 +18,11 @@ namespace AmazonDream.Api.Controllers
     public class SellerHomeController : ControllerBase
     {
         private Registration_BLL obj;
+        private SellerHome_BLL _sellerHome_BLL;
         public  SellerHomeController(IMapper mapper)
         {
             obj = new Registration_BLL(mapper);
+            _sellerHome_BLL = new SellerHome_BLL(mapper);
         }
 
         // POST: api/sellerhome
@@ -39,5 +41,20 @@ namespace AmazonDream.Api.Controllers
             return BadRequest();
             
         }
+
+        // GET: api/sellerhome/placedorder/1
+        [HttpGet("placedorder/{id}")]
+        public List<RecivedOrderModel> GetPlacedOrder(long id)
+        {
+            return _sellerHome_BLL.OrderRecived(id);
+        }
+
+        [HttpPost("updateStatus/{status}/{id}")]
+        public Boolean UpdateStatus(string status,long id)
+        {
+            return _sellerHome_BLL.UpdateStatus(status, id);
+        }
+
+
     }
 }

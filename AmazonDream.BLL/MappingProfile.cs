@@ -46,6 +46,9 @@ namespace AmazonDream.BLL
             CreateMap<PreVisit, PreVisitModel>();
             CreateMap<PreVisitModel, PreVisit>();
 
+            CreateMap<PlacedOrder, RecivedOrderModel>();
+            CreateMap<RecivedOrderModel, PlacedOrder>();
+
 
 
 

@@ -1,4 +1,5 @@
 ﻿using AmazonDream.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,10 +33,21 @@ namespace AmazonDream.DAL
                 catch { return false; }
             }
             return true;
-        
         }
 
-      
+        public List<PlacedOrder> OrderRecived(long id)              //By seller ID
+        {
+            return db.PlacedOrder.Where(o => o.Product.Seller_ID == id).ToList();
+        }
+
+        public Boolean UpdateStatus(string status,long id)
+        {
+            var order = db.PlacedOrder.Where(o => o.ID == id).FirstOrDefault();
+            order.Status = status;
+            db.Entry(order).State = EntityState.Modified;
+            db.SaveChanges();
+            return true;
+        }
 
 
     }

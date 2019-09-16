@@ -26,18 +26,12 @@ namespace AmazonDream.Api.Controllers.Seller
 
         // POST: api/SellerProduct/product
         [HttpPost("product")]
-        public IActionResult PostProduct([FromBody] ProductModel model)        //add product
+        public long PostProduct([FromBody] ProductModel model)        //add product
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest();
-            }
-            if (obj.AddProduct(model))
-            {
-                return Ok();
-            }
-            return BadRequest();
+            return (obj.AddProduct(model));   
         }
+
+
         // POST: api/SellerProduct/productPicture
         [HttpPost("productPicture")]
         public IActionResult PostProductPicture([FromBody] ProductPictureModel model)        //add product Picture

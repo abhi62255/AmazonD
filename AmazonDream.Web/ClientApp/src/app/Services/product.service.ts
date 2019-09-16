@@ -12,7 +12,7 @@ export class ProductService {
 
   constructor(private http: HttpClient, private _constant: ConstantsService) { }
 
-  addProduct(Product: any) {
+  addProduct(Product: any) {                    //add product
     console.log(Product);
 
     return this.http
@@ -22,8 +22,6 @@ export class ProductService {
   }
 
   addProductPicture(ProductPicture: any) {          //add product picture
-    console.log(ProductPicture);
-    this._constant.Product_ID = 3;
     ProductPicture.Product_ID = this._constant.Product_ID;
     return this.http
       .post(this._constant.baseUrl + 'sellerproduct/productPicture'
