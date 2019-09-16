@@ -143,12 +143,12 @@ namespace AmazonDream.BLL
 
         }
 
-        public Boolean ProductTrendRequest(long id)           //product trend request
+        public Boolean ProductTrendRequest(string value,long id)           //product trend request
         {
             var model = obj.GetProduct(id);
             if (model != null)
             {
-                model.ProductTrend = "Requested";
+                model.ProductTrend = value;
                 if (obj.UpdateProduct(model))
                 {
                     return true;

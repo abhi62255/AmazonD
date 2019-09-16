@@ -19,6 +19,14 @@ export class ViewTrendingProductComponent implements OnInit {
   }
 
 
+  removeTrendingProduct(id: number) {
+    this._productService.trendRequest("False", id)
+      .subscribe((data: any[]) => this.productList = data);
+
+    console.log(this.productList);
+  }
+
+
   ngOnInit() {
     this.viewProduct();
   }

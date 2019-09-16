@@ -1,4 +1,8 @@
 <p>view-all-product works!</p>
 <li *ngFor="let product of productList">
-  {{product | json}}
+  {{product | json}}{{product.id}}
+  <button (click)="deleteProduct(product.id)">Delete</button>
+  <button (click)="trendRequest(product.id)">Trend Request</button>
+  <button (click)="constProductID(product.id)">Update values</button>
+
 </li>

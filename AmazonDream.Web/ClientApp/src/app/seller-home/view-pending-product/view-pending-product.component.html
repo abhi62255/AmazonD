@@ -1,4 +1,5 @@
 <p>view-pending-product works!</p>
 <li *ngFor="let product of productList">
   {{product | json}}
+  <button (click)="deleteProduct(product.id)">Delete</button>
 </li>

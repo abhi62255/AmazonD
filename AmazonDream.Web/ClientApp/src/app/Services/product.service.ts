@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ConstantsService } from '../Services/constants.service';
 import { Observable } from 'rxjs';
+import { concat } from 'rxjs/operators';
 
 
 @Injectable({
@@ -46,5 +47,21 @@ export class ProductService {
   getTrendRequestedProducts(): Observable<any> {
     this._constant.Seller_ID = 1;       //Need to change this later After LoginProcess is over
     return this.http.get(this._constant.baseUrl + 'SellerProduct/trending/Requested/' + this._constant.Seller_ID);    //Give all Trend request product of seller
+  }
+
+  deleteProduct(id: number) {
+    console.log("Delete service");
+    return this.http.delete(this._constant.baseUrl + 'sellerproduct/delete/' + id);    //Delete Product
+  }
+
+
+  trendRequest(value: string, id: number) {
+    console.log("Delete service");
+    return this.http.put(this._constant.baseUrl + 'sellerproduct/trendrequest/' + value + '/' + id, null);    // Trend request product for seller
+  }
+
+  updateValues(values: any) {
+    values.ID = this._constant.Product_ID;
+    return this.http.put(this._constant.baseUrl + 'sellerproduct/updatevalues', values);    //Update Product Values
   }
 }

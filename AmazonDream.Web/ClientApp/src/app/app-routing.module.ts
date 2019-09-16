@@ -11,6 +11,7 @@ import { ViewPendingProductComponent } from './seller-home/view-pending-product/
 import { ViewTrendingProductComponent } from './seller-home/view-trending-product/view-trending-product.component';
 import { ViewTrendRequestedProductComponent } from './seller-home/view-trend-requested-product/view-trend-requested-product.component';
 import { AddProductPictureComponent } from './seller-home/add-product-picture/add-product-picture.component';
+import { EditProductValuesComponent } from './seller-home/view-all-product/edit-product-values/edit-product-values.component';
 
 
 const routes: Routes = [
@@ -28,11 +29,10 @@ const routes: Routes = [
       { path: 'TrendingProduct', component: ViewTrendingProductComponent },
       { path: 'TrendRequestedProduct', component: ViewTrendRequestedProductComponent },
       { path: 'AddProductPicture', component: AddProductPictureComponent }
-
-
-
     ]
-  }
+  },
+  { path: 'SellerHome/ViewProduct/UpdateValues', component: EditProductValuesComponent }
+
 ];
 
 @NgModule({

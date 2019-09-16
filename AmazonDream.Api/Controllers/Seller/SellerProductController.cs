@@ -120,14 +120,14 @@ namespace AmazonDream.Api.Controllers.Seller
         }
 
 
-        [HttpPut("trendRequest/{id}")]
-        public IActionResult ProductTrendRequest(long id)      //Request product for trend 
+        [HttpPut("trendRequest/{value}/{id}")]
+        public IActionResult ProductTrendRequest(string value,long id)      //Request product for trend 
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
-            if (obj.ProductTrendRequest(id))
+            if (obj.ProductTrendRequest(value,id))
             {
                 return Ok();
             }
@@ -136,7 +136,7 @@ namespace AmazonDream.Api.Controllers.Seller
 
 
         // PATCH: api/SellerProduct/delete/1
-        [HttpPatch("delete/{id}")]
+        [HttpDelete("delete/{id}")]
         public IActionResult DeleteProduct(long id)             //soft delete product 
         {
             if (obj.DeleteProduct(id))

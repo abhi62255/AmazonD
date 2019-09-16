@@ -1,4 +1,6 @@
 <p>view-trending-product works!</p>
 <li *ngFor="let product of productList">
   {{product | json}}
+  <button (click)="removeTrendingProduct(product.id)">Remove Trending</button>
+
 </li>
