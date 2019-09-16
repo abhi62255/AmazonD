@@ -31,13 +31,22 @@ namespace AmazonDream.DAL
         {
             if (db.Admin.Where(e => e.Email == email && e.Password == password).FirstOrDefault() == null)
             {
-                if (db.Seller.Where(e => e.Email == email && e.Password == password).FirstOrDefault() == null)
+                var seller = db.Seller.Where(e => e.Email == email && e.Password == password).FirstOrDefault();
+                if (seller == null)
                 {
                     if (db.Customer.Where(e => e.Email == email && e.Password == password).FirstOrDefault() == null)
                     {
                         return null;
                     }
                     return "Customer";
+                }
+                else if(seller.Status == "Pending")
+                {
+                    return "SellerPending";
+                }
+                else if (seller.Status == "deleted")
+                {
+                    return "SellerDeleted";
                 }
                 return "Seller";
             }

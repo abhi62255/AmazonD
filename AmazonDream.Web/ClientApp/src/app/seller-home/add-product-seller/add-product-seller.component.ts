@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms'
 import { ProductService } from 'src/app/Services/product.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { ProductService } from 'src/app/Services/product.service';
 })
 export class AddProductSellerComponent implements OnInit {
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService, private router: Router) { }
 
   addProduct(product: NgForm) {
 
@@ -21,6 +22,7 @@ export class AddProductSellerComponent implements OnInit {
       }
     );
     console.log(product.value);
+    this.router.navigate(['SellerHome/AddProductPicture']);
   }
 
   ngOnInit() {

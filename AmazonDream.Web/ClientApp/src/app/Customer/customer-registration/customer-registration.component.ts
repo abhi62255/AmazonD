@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { CustomerRegistrationService } from 'src/app/Services/customer-registration.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-customer-registration',
@@ -9,16 +9,15 @@ import { CustomerRegistrationService } from 'src/app/Services/customer-registrat
 })
 export class CustomerRegistrationComponent implements OnInit {
 
-  constructor(private customerRegService: CustomerRegistrationService) { }
+  constructor(private customerRegistration: CustomerRegistrationService) { }
 
   addCustomer(nf: NgForm) {
-    this.customerRegService.addCustomerDB(nf.value).subscribe(
+    this.customerRegistration.addCustomerDB(nf.value).subscribe(
       responseData => {
         console.log(responseData)
       }
-    );      //calling service method
+    );
   }
-
 
   ngOnInit() {
   }

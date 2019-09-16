@@ -7,6 +7,7 @@ import { ConstantsService } from '../Services/constants.service';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CustomerRegistrationService {
 
   constructor(private http: HttpClient, private _constant: ConstantsService) { }
@@ -15,7 +16,7 @@ export class CustomerRegistrationService {
     console.log(customer);
 
     return this.http
-      .post(this._constant.baseUrl+'customerRegistration'
+      .post(this._constant.baseUrl +'customerRegistration'
         , customer
       );
 

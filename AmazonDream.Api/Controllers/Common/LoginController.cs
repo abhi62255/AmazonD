@@ -21,7 +21,8 @@ namespace AmazonDream.Api.Controllers.Common
         [HttpPost]
         public String Post([FromBody]LoginModel model)
         {
-            return obj.login(model.Email,model.Password);         
+            var value = obj.login(model.Email, model.Password);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(value);
         }
 
     }

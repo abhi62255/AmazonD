@@ -19,6 +19,9 @@ import { CustomerRegistrationService } from './Services/customer-registration.se
 import { SellerRegistrationService } from './Services/seller-registration.service';
 import { ViewAllProductComponent } from './seller-home/view-all-product/view-all-product.component';
 import { ViewPendingProductComponent } from './seller-home/view-pending-product/view-pending-product.component';
+import { ViewTrendingProductComponent } from './seller-home/view-trending-product/view-trending-product.component';
+import { ViewTrendRequestedProductComponent } from './seller-home/view-trend-requested-product/view-trend-requested-product.component';
+import { AddProductPictureComponent } from './seller-home/add-product-picture/add-product-picture.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { ViewPendingProductComponent } from './seller-home/view-pending-product/
     AdminHomeComponent,
     AddProductSellerComponent,
     ViewAllProductComponent,
-    ViewPendingProductComponent
+    ViewPendingProductComponent,
+    ViewTrendingProductComponent,
+    ViewTrendRequestedProductComponent,
+    AddProductPictureComponent
   ],
   imports: [
     BrowserModule,

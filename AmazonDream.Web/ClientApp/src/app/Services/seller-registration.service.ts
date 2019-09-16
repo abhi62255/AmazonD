@@ -11,8 +11,6 @@ export class SellerRegistrationService {
 
   constructor(private http: HttpClient, private _constant: ConstantsService) { }
 
-  baseUrl = "https://localhost:5001/api";
-
   addSellerDB(seller: any) {
     console.log(seller);
 

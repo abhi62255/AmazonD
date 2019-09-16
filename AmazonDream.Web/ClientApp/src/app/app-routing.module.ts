@@ -8,6 +8,9 @@ import { CustomerRegistrationComponent } from './Customer/customer-registration/
 import { LoginComponent } from './Common/login/login.component';
 import { ViewAllProductComponent } from './seller-home/view-all-product/view-all-product.component';
 import { ViewPendingProductComponent } from './seller-home/view-pending-product/view-pending-product.component';
+import { ViewTrendingProductComponent } from './seller-home/view-trending-product/view-trending-product.component';
+import { ViewTrendRequestedProductComponent } from './seller-home/view-trend-requested-product/view-trend-requested-product.component';
+import { AddProductPictureComponent } from './seller-home/add-product-picture/add-product-picture.component';
 
 
 const routes: Routes = [
@@ -21,7 +24,12 @@ const routes: Routes = [
     children: [
       { path: 'AddProduct', component: AddProductSellerComponent },
       { path: 'ViewProduct', component: ViewAllProductComponent },
-      { path: 'PendingProduct', component: ViewPendingProductComponent }
+      { path: 'PendingProduct', component: ViewPendingProductComponent },
+      { path: 'TrendingProduct', component: ViewTrendingProductComponent },
+      { path: 'TrendRequestedProduct', component: ViewTrendRequestedProductComponent },
+      { path: 'AddProductPicture', component: AddProductPictureComponent }
+
+
 
     ]
   }
