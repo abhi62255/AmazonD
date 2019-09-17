@@ -61,7 +61,21 @@ namespace AmazonDream.BLL
 
             return suggestedProductsList;
         }
-        
+
+        public List<ProductModel> GetProducts()                         //get product for all user 
+        {
+            var products = _productDA.GetProductByProductStatus("Accepted");
+            var productList = new List<ProductModel>();
+            foreach(var product in products)
+            {
+                var model = _mapper.Map<Product, ProductModel>(product);
+                productList.Add(model);
+            }
+
+            return productList;
+        }
+
+
 
         public void AddProductToSuggestionList(List<Product> products)
         {
@@ -71,14 +85,35 @@ namespace AmazonDream.BLL
 
                 foreach (var pro in productBySubCategoryList)
                 {
-                    var model = _mapper.Map<Product, ProductModel>(pro);
-                    if(suggestedProductsList.FirstOrDefault(p=>p.ID == model.ID) == null)
-                        suggestedProductsList.Add(model);
+                    if(pro.ProductStatus == "Accepted")
+                    {
+                        var model = _mapper.Map<Product, ProductModel>(pro);
+                        if (suggestedProductsList.FirstOrDefault(p => p.ID == model.ID) == null)
+                            suggestedProductsList.Add(model);
+                    }
+                    
                 }
             }
         }
 
+        public ProductModel GetProduct(long id)                 //get Product
+        {
+            var entity = _productDA.GetProduct(id);
+            return _mapper.Map<Product, ProductModel>(entity);
+        }
 
+        public List<string> GetProductPicture(long id)          //get ProductPicture
+        {
+            var pictureList = new List<string>();
+            var modelPP = _productDA.GetProductPicture(id);
+
+            foreach(var pic in modelPP)
+            {
+                pictureList.Add(pic.PicturePath);
+            }
+
+            return pictureList;
+        }
 
 
     }

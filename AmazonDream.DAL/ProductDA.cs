@@ -34,6 +34,11 @@ namespace AmazonDream.DAL
             return (db.Product.Where(p => p.Seller_ID == id && p.ProductTrend == value).ToList());
         }
 
+        public List<ProductPicture> GetProductPicture(long id)              //get product picture
+        {
+            return db.ProductPicture.Where(p => p.Product_ID == id).ToList();
+        }
+
 
         public List<Product> GetProductByProductStatus(string value)           //get all product which are Pending:Accepted:Deleted:all
         {

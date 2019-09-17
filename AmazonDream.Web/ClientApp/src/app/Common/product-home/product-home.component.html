@@ -1,0 +1,16 @@
+<p>product-home works!</p>
+<li *ngIf="product">
+
+  {{product |json}}
+  <button (click)="addProductToKart(product.id)">Add To Kart</button>
+</li>
+
+<li *ngFor="let pic of productPicture">
+  <img src="../../../assets/ProductPicture/{{pic}}" alt="Image could not load" height="300" width="300" />
+</li>
+
+
+
+<!--<button (click)="deleteProduct(product.id)">Delete</button>
+<button (click)="trendRequest(product.id)">Trend Request</button>
+<button (click)="constProductID(product.id)">Update values</button>-->

@@ -33,5 +33,12 @@ namespace AmazonDream.Api.Controllers.Customer
             return obj.GetSuggestedProductsUnknownUser();
         }
 
+
+        [HttpGet("all")]
+        public List<ProductModel> GetProducts()                 //for All User
+        {
+            return obj.GetProducts();
+        }
+
     }
 }

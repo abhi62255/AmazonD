@@ -39,7 +39,6 @@ namespace AmazonDream.ViewModels
         public string ProductGenderType { get; set; }
 
         [Required]
-        [MaxLength(100, ErrorMessage = "Maximum length is 100")]
         public string ProductDescription { get; set; }
 
         public long Seller_ID { get; set; }

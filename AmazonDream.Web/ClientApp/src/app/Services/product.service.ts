@@ -85,6 +85,13 @@ export class ProductService {
     return this.http.get(this._constant.baseUrl + 'AdminHome/ProductTrendRequest');    //Give all Trend Request products
   }
 
+  getProductDetails(): Observable<any> {
+    return this.http.get(this._constant.baseUrl + 'product/' + this._constant.Product_ID);    //Give one product
+  }
+
+  getProductPicture(): Observable<any> {
+    return this.http.get(this._constant.baseUrl + 'product/picture/' + this._constant.Product_ID);    //Give product pictures
+  }
 
 
 }

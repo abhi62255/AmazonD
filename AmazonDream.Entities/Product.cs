@@ -43,7 +43,6 @@ namespace AmazonDream.Entities
         public string ProductGenderType { get; set; }
 
         [Required]
-        [MaxLength(100)]
         public string ProductDescription { get; set; }
 
         [Required]

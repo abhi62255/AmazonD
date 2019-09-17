@@ -1,0 +1,13 @@
+<p>products works!</p>
+<li *ngFor="let product of productList">
+  {{product | json}}
+  <button (click)="productHome(product.id)">Details</button>
+ 
+
+</li>
+<p>ALL</p>
+<li *ngFor="let product of productListAll">
+  {{product | json}}
+  <button (click)="productHome(product.id)">Details</button>
+
+</li>

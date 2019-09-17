@@ -14,9 +14,14 @@ export class AddProductSellerComponent implements OnInit {
 
   constructor(private productService: ProductService, private router: Router, private _constant: ConstantsService) { }
 
+  Descrption: string = "";      //to store in database
+  DescrptionView                //make array to diplay at realtime
   addProduct(product: NgForm) {
 
-    product.value.Seller_ID = 1;
+    product.value.Seller_ID = 1;      //need to change later
+    this.Descrption = this.Descrption.substring(0, this.Descrption.length - 1);       //removing , from end of descrption
+    product.value.ProductDescription = this.Descrption;
+
     this.productService.addProduct(product.value).subscribe(
       responseData => {
         console.log("productID");
@@ -27,6 +32,15 @@ export class AddProductSellerComponent implements OnInit {
     );
     console.log(product.value);
     this.router.navigate(['SellerHome/AddProductPicture']);
+  }
+
+
+  addDescription(descrption: NgForm) {
+    console.log("Descrption");
+    this.Descrption += descrption.value.property + ' : ' + descrption.value.value + ',';    //Creating descrption  in string
+    this.DescrptionView = this.Descrption.split(",");       //creating array to display
+
+    console.log(this.Descrption);
   }
 
   ngOnInit() {

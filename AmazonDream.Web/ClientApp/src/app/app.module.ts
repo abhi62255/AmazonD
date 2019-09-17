@@ -31,6 +31,8 @@ import { ViewSellerComponent } from './admin-home/view-seller/view-seller.compon
 import { TrendingProductComponent } from './admin-home/trending-product/trending-product.component';
 import { TrendRequestComponent } from './admin-home/trend-request/trend-request.component';
 import { OrdersComponent } from './admin-home/orders/orders.component';
+import { ProductHomeComponent } from './Common/product-home/product-home.component';
+import { ProductsComponent } from './Common/products/products.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,9 @@ import { OrdersComponent } from './admin-home/orders/orders.component';
     ViewSellerComponent,
     TrendingProductComponent,
     TrendRequestComponent,
-    OrdersComponent
+    OrdersComponent,
+    ProductHomeComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

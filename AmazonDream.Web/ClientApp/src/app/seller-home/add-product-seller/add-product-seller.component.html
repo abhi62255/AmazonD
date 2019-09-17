@@ -10,6 +10,17 @@
   <input type="text" name="ProductBrand" placeholder="Product Brand" ngModel />
   <input type="text" name="ProductGenderType" placeholder="Product Gender Type" ngModel />
   <input type="text" name="ProductDescription" placeholder="Product Descrption" ngModel />
+ 
+  <li *ngFor="let descrption of DescrptionView">
+    {{descrption}}
+  </li>
+
+  <form #d=ngForm>
+    <input type="text" name="property" placeholder="Property" ngModel/>
+    <input type="text" name="value" placeholder="Value" ngModel/>
+    <button type="submit" (click)="addDescription(d)">Add</button>
+  </form>
+        
   <input type="hidden" name="Seller_ID" ngModel />
   <button type="submit" value="submit">Add Product</button>
 </form>

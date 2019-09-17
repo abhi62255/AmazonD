@@ -21,14 +21,24 @@ import { PendingProductComponent } from './admin-home/pending-product/pending-pr
 import { TrendingProductComponent } from './admin-home/trending-product/trending-product.component';
 import { TrendRequestComponent } from './admin-home/trend-request/trend-request.component';
 import { OrdersComponent } from './admin-home/orders/orders.component';
+import { ProductHomeComponent } from './Common/product-home/product-home.component';
+import { ProductsComponent } from './Common/products/products.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/HomePage', pathMatch: 'full' },
-  { path: 'HomePage', component: HomePageComponent },
+  { path: '', redirectTo: '/HomePage/Product', pathMatch: 'full' },
+  { path: 'Homepage', redirectTo: '/HomePage/Product', pathMatch: 'full' },
+  {
+    path: 'HomePage', component: HomePageComponent,
+    children: [
+      { path: 'Product', component: ProductsComponent },
+      { path: 'ProductHome', component: ProductHomeComponent }
+    ]
+  },
   { path: 'HomePage/Login', component: LoginComponent },
   { path: 'HomePage/CustomerRegistration', component: CustomerRegistrationComponent },
   { path: 'HomePage/SellerRegistration', component: SellerRegistrationComponent },
+
   {
     path: 'SellerHome', component: SellerHomeComponent,
     children: [
