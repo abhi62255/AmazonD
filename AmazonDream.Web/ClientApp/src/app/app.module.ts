@@ -33,6 +33,9 @@ import { TrendRequestComponent } from './admin-home/trend-request/trend-request.
 import { OrdersComponent } from './admin-home/orders/orders.component';
 import { ProductHomeComponent } from './Common/product-home/product-home.component';
 import { ProductsComponent } from './Common/products/products.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -65,7 +68,9 @@ import { ProductsComponent } from './Common/products/products.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [ConstantsService,
     ProductService,
