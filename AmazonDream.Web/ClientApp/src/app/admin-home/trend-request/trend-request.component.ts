@@ -21,9 +21,12 @@ export class TrendRequestComponent implements OnInit {
 
 
   productTrend(status: string, id: number) {
-    this._productService.trendProduct(status, id)
-      .subscribe((data: any[]) => this.productList = data);
-    this.ngOnInit();
+    this._productService.trendProduct(status, id).subscribe(
+      responseData => {
+        console.log(responseData)
+        this.ngOnInit();
+      }
+    );
   }
 
 

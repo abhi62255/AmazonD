@@ -19,8 +19,12 @@ export class TrendingProductComponent implements OnInit {
   }
 
   productTrend(id: number) {
-    this._productService.trendProduct('False', id)
-      .subscribe((data: any[]) => this.productList = data);
+    this._productService.trendProduct('False', id).subscribe(
+      responseData => {
+        console.log(responseData)
+        this.ngOnInit();
+      }
+    );
   }
 
   ngOnInit() {

@@ -23,6 +23,7 @@ export class ProductService {
 
   addProductPicture(ProductPicture: any) {          //add product picture
     ProductPicture.Product_ID = this._constant.Product_ID;
+    ProductPicture.PicturePath = ProductPicture.PicturePath.replace('C:\\fakepath\\', '');    //Remove fake path From Picture Path
     return this.http
       .post(this._constant.baseUrl + 'sellerproduct/productPicture'
       , ProductPicture

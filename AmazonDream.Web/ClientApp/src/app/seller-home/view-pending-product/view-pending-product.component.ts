@@ -23,6 +23,8 @@ export class ViewPendingProductComponent implements OnInit {
     this._productService.deleteProduct(id).subscribe(
       responseData => {
         console.log(responseData)
+        this.ngOnInit();
+
       }
     );
   }

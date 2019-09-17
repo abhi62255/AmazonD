@@ -8,6 +8,8 @@ namespace AmazonDream.ViewModels
     {
         public long ID { get; set; }
         public long Product_ID { get; set; }
+        public long Seller_ID { get; set; }
+        public string SellerName { get; set; }
         public string ProductName { get; set; }
         public long OrderNumber { get; set; }
         public long Quantity { get; set; }

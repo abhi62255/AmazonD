@@ -25,9 +25,10 @@ export class ReceivedOrderComponent implements OnInit {
     this._receivedOrder.updateStatus(status.value.status, id).subscribe(
       responseData => {
         console.log(responseData)
+        this.ngOnInit();
       }
     );
-    this.router.navigate(['SellerHome/ViewProduct']);
+
   }
 
 

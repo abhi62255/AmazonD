@@ -3,6 +3,7 @@ import { ConstantsService } from 'src/app/Services/constants.service';
 import { NgForm } from '@angular/forms';
 import { ProductService } from 'src/app/Services/product.service';
 import { Router } from '@angular/router';
+import { ViewAllProductComponent } from '../view-all-product.component';
 
 @Component({
   selector: 'app-edit-product-values',

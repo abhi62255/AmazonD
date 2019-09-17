@@ -20,13 +20,21 @@ export class ViewProductComponent implements OnInit {
 
 
   respondProduct(status: string, id: number) {
-    this._productService.respondProductRequest(status, id)
-      .subscribe((data: any[]) => this.productList = data);
+    this._productService.respondProductRequest(status, id).subscribe(
+      responseData => {
+        console.log(responseData)
+        this.ngOnInit();
+      }
+    );
   }
 
   trendProduct(id: number) {
-    this._productService.trendProduct("True", id)
-      .subscribe((data: any[]) => this.productList = data);
+    this._productService.trendProduct("True", id).subscribe(
+      responseData => {
+        console.log(responseData)
+        this.ngOnInit();
+      }
+    );
   }
 
   ngOnInit() {

@@ -20,8 +20,13 @@ export class PendingProductComponent implements OnInit {
 
 
   respondProductRequest(status: string, id: number) {
-    this._productService.respondProductRequest(status, id)
-      .subscribe((data: any[]) => this.productList = data);
+    this._productService.respondProductRequest(status, id).subscribe(
+      responseData => {
+        console.log(responseData)
+        this.ngOnInit();
+
+      }
+    );
   }
 
   ngOnInit() {

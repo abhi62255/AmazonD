@@ -15,7 +15,7 @@ export class ViewAllProductComponent implements OnInit {
   public productList: any[];
   viewAllProduct() {
     this._productService.getAcceptedProducts()
-      .subscribe((data: any[]) => this.productList = data);
+      .subscribe((data: any[]) => this.productList = data );
 
     console.log(this.productList);
   }
@@ -25,6 +25,7 @@ export class ViewAllProductComponent implements OnInit {
     this._productService.deleteProduct(id).subscribe(
       responseData => {
         console.log(responseData)
+        this.ngOnInit();
       }
     );
   }
@@ -42,7 +43,6 @@ export class ViewAllProductComponent implements OnInit {
     console.log(id);
     this._constant.Product_ID = id;
     this.router.navigate(["SellerHome/ViewProduct/UpdateValues"]);
-
   }
 
   ngOnInit() {

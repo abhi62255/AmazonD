@@ -19,9 +19,12 @@ export class ViewSellerComponent implements OnInit {
   }
 
   sellerStatus(status: string, id: number) {
-    this._sellerService.respondSellerRequest(status, id)
-      .subscribe((data: any[]) => this.sellerList = data);
-    this.getSeller();
+    this._sellerService.respondSellerRequest(status, id).subscribe(
+      responseData => {
+        console.log(responseData)
+        this.ngOnInit();
+      }
+    );
   }
 
 

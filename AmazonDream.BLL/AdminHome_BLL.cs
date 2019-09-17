@@ -142,6 +142,9 @@ namespace AmazonDream.BLL
                 var product = _productDA.GetProduct(entity.Product_ID);
                 model.ProductName = product.ProductName;
                 model.Product_ID = product.ID;
+                model.Seller_ID = product.Seller_ID;
+                var seller = _sellerDA.GetSellerByID(product.Seller_ID);
+                model.SellerName = seller.Name;
                 modelList.Add(model);
             }
             return modelList;
