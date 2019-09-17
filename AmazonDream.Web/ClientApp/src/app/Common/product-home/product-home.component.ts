@@ -36,7 +36,7 @@ export class ProductHomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this._constant.Product_ID);
+    console.log(localStorage.getItem("Product_ID"));
     this.getProductDetails();
     this.getProductPicture();
   }

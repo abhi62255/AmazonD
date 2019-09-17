@@ -41,7 +41,7 @@ export class ViewAllProductComponent implements OnInit {
 
   constProductID(id: number) {          //to set Product_ID in Constant services
     console.log(id);
-    this._constant.Product_ID = id;
+    localStorage.setItem("Product_ID", <string><any>id);
     this.router.navigate(["SellerHome/ViewProduct/UpdateValues"]);
   }
 

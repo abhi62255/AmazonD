@@ -34,11 +34,12 @@ namespace AmazonDream.DAL
                 var seller = db.Seller.Where(e => e.Email == email && e.Password == password).FirstOrDefault();
                 if (seller == null)
                 {
-                    if (db.Customer.Where(e => e.Email == email && e.Password == password).FirstOrDefault() == null)
+                    var customer = db.Customer.Where(e => e.Email == email && e.Password == password).FirstOrDefault();
+                    if (customer == null)
                     {
                         return null;
                     }
-                    return "Customer";
+                    return "Customer,"+customer.ID;
                 }
                 else if(seller.Status == "Pending")
                 {
@@ -48,7 +49,7 @@ namespace AmazonDream.DAL
                 {
                     return "SellerDeleted";
                 }
-                return "Seller";
+                return "Seller,"+seller.ID;
             }
             return "Admin";
         }

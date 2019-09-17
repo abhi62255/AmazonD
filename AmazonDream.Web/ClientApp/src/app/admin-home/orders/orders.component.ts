@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class OrdersComponent implements OnInit {
 
-  constructor(private _receivedOrder: OrderPlacedService, private router: Router) { }
+  constructor(private _receivedOrder: OrderPlacedService) { }
 
 
 

@@ -12,10 +12,9 @@ import { ViewAllProductComponent } from '../view-all-product.component';
 })
 export class EditProductValuesComponent implements OnInit {
 
-  constructor(private _constant: ConstantsService, private productServices: ProductService, private router: Router) { }
+  constructor(private productServices: ProductService, private router: Router) { }
 
   updateValues(nf: NgForm) {
-    console.log(this._constant.Product_ID);
     this.productServices.updateValues(nf.value).subscribe(
       responseData => {
         console.log(responseData)

@@ -12,32 +12,48 @@ export class LoginComponent implements OnInit {
 
   constructor(private login: LoginService, private router: Router) { }
 
+  user: any;
+
   loginF(nf: NgForm) {
     this.login.login(nf.value).subscribe(
       responseData => {
         console.log(responseData)
-        if (responseData == "Admin") {
+        this.user = <string><any>responseData;
+        if (this.user != null) {
+          this.user = this.user.split(",");       //Seperating user and ID from response
+          console.log(this.user[0] + ' ' + this.user[1]);
+        }
+      
+        
+
+        if (this.user == null) {
+          localStorage.removeItem("Seller_ID");
+          localStorage.removeItem("Customer_ID");
+          console.log("Wrong User Crendtials");
+        }
+        else if (this.user[0] == "Admin") {
           console.log("Admin");
           this.router.navigate(['AdminHome'])
         }
-        else if (responseData == "Seller") {
+        else if (this.user[0] == "Seller") {
           console.log("Seller");
+          localStorage.removeItem("Customer_ID");
+          localStorage.setItem("Seller_ID", this.user[1]);
           this.router.navigate(['SellerHome'])
         }
-        else if (responseData == "SellerPending") {
+        else if (this.user[0] == "SellerPending") {
           console.log("SellerPending");
         }
-        else if (responseData == "SellerDeleted") {
+        else if (this.user[0] == "SellerDeleted") {
           console.log("SellerDeleted");
         }
-        else if (responseData == "Customer") {
+        else if (this.user[0] == "Customer") {
           console.log("Customer");
-          this.router.navigate(['HomePage'])
+          localStorage.removeItem("Seller_ID");
+          localStorage.setItem("Customer_ID", this.user[1]);
+          this.router.navigate(['HomePage/Product'])
         }
-        else {
-          console.log("Wrong User Crendtials");
-
-        }
+       
 
       }
     );

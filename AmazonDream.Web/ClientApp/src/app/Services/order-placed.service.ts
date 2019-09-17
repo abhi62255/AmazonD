@@ -13,8 +13,7 @@ export class OrderPlacedService {
 
 
   receivedOrder(): Observable<any>  {
-    this._constant.Seller_ID = 1;       //Need to change this later After LoginProcess is over
-    return this.http.get(this._constant.baseUrl + 'sellerhome/placedorder/' + this._constant.Seller_ID);    //Give all active product of seller
+    return this.http.get(this._constant.baseUrl + 'sellerhome/placedorder/' + localStorage.getItem("Seller_ID"));    //Give all active product of seller
 
   }
 

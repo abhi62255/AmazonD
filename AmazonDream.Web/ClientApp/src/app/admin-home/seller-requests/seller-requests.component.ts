@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class SellerRequestsComponent implements OnInit {
 
-  constructor(private _sellerService: SellerServiceService, private _constant: ConstantsService, private router: Router) { }
+  constructor(private _sellerService: SellerServiceService) { }
 
   public sellerList: any[];
   getSeller() {

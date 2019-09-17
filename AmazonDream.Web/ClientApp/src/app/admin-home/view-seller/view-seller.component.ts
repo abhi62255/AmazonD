@@ -9,7 +9,7 @@ import { SellerServiceService } from 'src/app/Services/seller-service.service';
 })
 export class ViewSellerComponent implements OnInit {
 
-  constructor(private _sellerService: SellerServiceService, private _constant: ConstantsService) { }
+  constructor(private _sellerService: SellerServiceService) { }
 
 
   public sellerList: any[];

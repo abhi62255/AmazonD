@@ -41,14 +41,14 @@ export class ProductsComponent implements OnInit {
 
 
   productHome(id: number) {
-    this._constant.Product_ID = id;
+    localStorage.setItem("Product_ID", <string><any>id);
     this.router.navigate(['HomePage/ProductHome']);
   }
 
 
   ngOnInit() {
     this.productSuggestionAll();
-    if (this._constant.Customer_ID == 0) {
+    if (localStorage.getItem("Customer_ID") == null) {
       this.productSuggestionUnKnown();
     }
     else {

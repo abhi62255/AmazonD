@@ -9,7 +9,7 @@ import { ConstantsService } from 'src/app/Services/constants.service';
 })
 export class PendingProductComponent implements OnInit {
 
-  constructor(private _productService: ProductService, private _constant: ConstantsService) { }
+  constructor(private _productService: ProductService) { }
 
   public productList: any[];
 

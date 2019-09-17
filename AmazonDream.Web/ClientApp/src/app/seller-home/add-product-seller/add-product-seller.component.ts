@@ -12,13 +12,14 @@ import { ConstantsService } from 'src/app/Services/constants.service';
 })
 export class AddProductSellerComponent implements OnInit {
 
-  constructor(private productService: ProductService, private router: Router, private _constant: ConstantsService) { }
+  constructor(private productService: ProductService, private router: Router) { }
 
+  Product_ID: string;
   Descrption: string = "";      //to store in database
   DescrptionView                //make array to diplay at realtime
   addProduct(product: NgForm) {
 
-    product.value.Seller_ID = 1;      //need to change later
+    product.value.Seller_ID = localStorage.getItem("Seller_ID");
     this.Descrption = this.Descrption.substring(0, this.Descrption.length - 1);       //removing , from end of descrption
     product.value.ProductDescription = this.Descrption;
 
@@ -27,7 +28,8 @@ export class AddProductSellerComponent implements OnInit {
         console.log("productID");
         console.log(responseData)
 
-        this._constant.Product_ID = <number><any>responseData.toString();
+        this.Product_ID = responseData.toString();
+        localStorage.setItem("Product_ID", this.Product_ID);      //string and number locha
       }
     );
     console.log(product.value);

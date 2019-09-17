@@ -16,10 +16,9 @@ export class KartService {
   kartmodel= new Kart();
 
   addProductToKart(id: number) {
-    this._constant.Customer_ID = 1;
     this.kartmodel.Quantity = 1;
     this.kartmodel.Product_ID = id;
-    this.kartmodel.Customer_ID = this._constant.Customer_ID;
+    this.kartmodel.Customer_ID = <number><any>localStorage.getItem("Customer_ID");
     return this.http
       .post(this._constant.baseUrl + 'CustomerKart/add'
       , this.kartmodel

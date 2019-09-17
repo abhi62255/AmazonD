@@ -22,7 +22,7 @@ export class ProductService {
   }
 
   addProductPicture(ProductPicture: any) {          //add product picture
-    ProductPicture.Product_ID = this._constant.Product_ID;
+    ProductPicture.Product_ID = localStorage.getItem("Product_ID");
     ProductPicture.PicturePath = ProductPicture.PicturePath.replace('C:\\fakepath\\', '');    //Remove fake path From Picture Path
     return this.http
       .post(this._constant.baseUrl + 'sellerproduct/productPicture'
@@ -31,21 +31,17 @@ export class ProductService {
   }
 
   getAcceptedProducts(): Observable<any> {
-    this._constant.Seller_ID = 1;       //Need to change this later After LoginProcess is over
-    return this.http.get(this._constant.baseUrl + 'SellerProduct/accepted/' + this._constant.Seller_ID);    //Give all active product of seller
+    return this.http.get(this._constant.baseUrl + 'SellerProduct/accepted/' + localStorage.getItem("Seller_ID"));    //Give all active product of seller
   }
   getPendingProducts(): Observable<any> {
-    this._constant.Seller_ID = 1;       //Need to change this later After LoginProcess is over
-    return this.http.get(this._constant.baseUrl + 'SellerProduct/pending/' + this._constant.Seller_ID);    //Give all pending product of seller
+    return this.http.get(this._constant.baseUrl + 'SellerProduct/pending/' + localStorage.getItem("Seller_ID"));    //Give all pending product of seller
   }
 
   getTrendingProducts(): Observable<any> {
-    this._constant.Seller_ID = 1;       //Need to change this later After LoginProcess is over
-    return this.http.get(this._constant.baseUrl + 'SellerProduct/trending/True/' + this._constant.Seller_ID);    //Give all Trending product of seller
+    return this.http.get(this._constant.baseUrl + 'SellerProduct/trending/True/' + localStorage.getItem("Seller_ID"));    //Give all Trending product of seller
   }
   getTrendRequestedProducts(): Observable<any> {
-    this._constant.Seller_ID = 1;       //Need to change this later After LoginProcess is over
-    return this.http.get(this._constant.baseUrl + 'SellerProduct/trending/Requested/' + this._constant.Seller_ID);    //Give all Trend request product of seller
+    return this.http.get(this._constant.baseUrl + 'SellerProduct/trending/Requested/' + localStorage.getItem("Seller_ID"));    //Give all Trend request product of seller
   }
 
   deleteProduct(id: number) {
@@ -60,7 +56,7 @@ export class ProductService {
   }
 
   updateValues(values: any) {
-    values.ID = this._constant.Product_ID;
+    values.ID = localStorage.getItem("Product_ID");
     return this.http.put(this._constant.baseUrl + 'sellerproduct/updatevalues', values);    //Update Product Values
   }
 
@@ -86,11 +82,11 @@ export class ProductService {
   }
 
   getProductDetails(): Observable<any> {
-    return this.http.get(this._constant.baseUrl + 'product/' + this._constant.Product_ID);    //Give one product
+    return this.http.get(this._constant.baseUrl + 'product/' + localStorage.getItem("Product_ID"));    //Give one product
   }
 
   getProductPicture(): Observable<any> {
-    return this.http.get(this._constant.baseUrl + 'product/picture/' + this._constant.Product_ID);    //Give product pictures
+    return this.http.get(this._constant.baseUrl + 'product/picture/' + localStorage.getItem("Product_ID"));    //Give product pictures
   }
 
 

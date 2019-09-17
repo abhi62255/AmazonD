@@ -14,8 +14,7 @@ export class ProductSuggestionsService {
 
   GetSuggestedProductsKnownUser(): Observable<any> {
     console.log("Known user");
-    this._constant.Customer_ID = 1;       //Need to change this later After LoginProcess is over
-    return this.http.get(this._constant.baseUrl + 'ProductSuggestions/' + this._constant.Customer_ID);    //give product suggestion for customer
+    return this.http.get(this._constant.baseUrl + 'ProductSuggestions/' + localStorage.getItem("Customer_ID"));    //give product suggestion for customer
   }
 
   GetSuggestedProductsUnknownUser(): Observable<any> {
