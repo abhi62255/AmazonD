@@ -71,6 +71,12 @@ namespace AmazonDream.Api.Controllers.Admin
         }
 
 
+        [HttpGet("ProductTrendRequest")]
+        public List<ProductModel> TrendRequestProduct()         //Get Trending Product
+        {
+            return obj.TrendRequestProduct();
+        }
+
         [HttpPut("TrendResponse/{value}/{id}")]
         public IActionResult TrendResponse(string value,int id)         //Give Trend response True:False
         {
@@ -81,6 +87,11 @@ namespace AmazonDream.Api.Controllers.Admin
             return BadRequest();
         }
 
+        [HttpGet("PlacedOrder")]
+        public List<RecivedOrderModel> GetPlacedOrder()
+        {
+            return obj.OrderRecived();
+        }
 
 
     }

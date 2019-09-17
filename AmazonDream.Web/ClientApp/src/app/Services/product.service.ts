@@ -73,11 +73,17 @@ export class ProductService {
   }
 
   trendProduct(status: string, id: number) {
-    return this.http.put(this._constant.baseUrl + 'AdminHome/TrendResponse/' + status + '/' + id, null);    //Respond to product Request
+    return this.http.put(this._constant.baseUrl + 'AdminHome/TrendResponse/' + status + '/' + id, null);    //Respond to product trend Request
   }
 
   getTrendingProductsAll(): Observable<any> {
     return this.http.get(this._constant.baseUrl + 'AdminHome/ProductTrend');    //Give all Trending products
   }
+
+  getTrendRequestProductsAll(): Observable<any> {
+    return this.http.get(this._constant.baseUrl + 'AdminHome/ProductTrendRequest');    //Give all Trend Request products
+  }
+
+
 
 }

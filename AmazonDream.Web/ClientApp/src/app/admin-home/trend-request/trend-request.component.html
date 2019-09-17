@@ -1,0 +1,8 @@
+<p>trend-request works!</p>
+<li *ngFor="let product of productList">
+  {{product | json}}
+
+  <button (click)="productTrend('True',product.id)" type="submit">Accept</button>
+  <button (click)="productTrend('False',product.id)" type="submit">Delete</button>
+
+</li>

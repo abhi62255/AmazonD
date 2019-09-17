@@ -14,7 +14,7 @@ export class ReceivedOrderComponent implements OnInit {
 
 
   public orderList: any[];
-  viewPendingProducts() {
+  viewreceivedOrder() {
     this._receivedOrder.receivedOrder()
       .subscribe((data: any[]) => this.orderList = data);
 
@@ -32,7 +32,7 @@ export class ReceivedOrderComponent implements OnInit {
 
 
   ngOnInit() {
-    this.viewPendingProducts();
+    this.viewreceivedOrder();
   }
 
 }

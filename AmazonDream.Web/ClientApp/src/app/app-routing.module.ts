@@ -19,6 +19,8 @@ import { ViewSellerComponent } from './admin-home/view-seller/view-seller.compon
 import { ViewProductComponent } from './admin-home/view-product/view-product.component';
 import { PendingProductComponent } from './admin-home/pending-product/pending-product.component';
 import { TrendingProductComponent } from './admin-home/trending-product/trending-product.component';
+import { TrendRequestComponent } from './admin-home/trend-request/trend-request.component';
+import { OrdersComponent } from './admin-home/orders/orders.component';
 
 
 const routes: Routes = [
@@ -48,7 +50,11 @@ const routes: Routes = [
       { path: 'ViewSeller', component: ViewSellerComponent },
       { path: 'ViewProduct', component: ViewProductComponent },
       { path: 'PendingProduct', component: PendingProductComponent },
-      { path: 'TrendingProduct', component: TrendingProductComponent }
+      { path: 'TrendingProduct', component: TrendingProductComponent },
+      { path: 'TrendRequest', component: TrendRequestComponent },
+      { path: 'Orders', component: OrdersComponent }
+
+
 
     ]
   }

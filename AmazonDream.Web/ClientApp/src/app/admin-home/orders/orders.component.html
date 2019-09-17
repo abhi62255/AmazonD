@@ -1,0 +1,8 @@
+<p>orders works!</p>
+<li *ngFor="let order of orderList">
+  {{order | json}}
+  <!--<form (ngSubmit)="updateStatus(f,order.id)" #f=ngForm>
+    <input type="text" name="status" placeholder="ProductStatus" ngModel />
+    <button type="submit" value="Update">Update Status</button>
+  </form>-->
+</li>

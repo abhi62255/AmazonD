@@ -40,7 +40,7 @@ namespace AmazonDream.DAL
             return db.PlacedOrder.Where(o => o.Product.Seller_ID == id).ToList();
         }
 
-        public Boolean UpdateStatus(string status,long id)
+        public Boolean UpdateStatus(string status,long id)           //Update Order Status
         {
             var order = db.PlacedOrder.Where(o => o.ID == id).FirstOrDefault();
             order.Status = status;
@@ -49,6 +49,15 @@ namespace AmazonDream.DAL
             return true;
         }
 
+        public List<PlacedOrder> OrderRecived()              //Order Recived (for admin)
+        {
+            return db.PlacedOrder.ToList();
+        }
+
+        public List<PlacedOrder> OrderPlaced(long id)              //Order Placed (for Customer)
+        {
+            return db.PlacedOrder.Where(o => o.Customer_ID == id).ToList();
+        }
 
     }
 }

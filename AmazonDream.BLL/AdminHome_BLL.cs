@@ -14,6 +14,7 @@ namespace AmazonDream.BLL
         ProductDA _productDA = new ProductDA();
         SellerDA _sellerDA = new SellerDA();
         AddressDA _addressDA = new AddressDA();
+        PlaceOrderDA _placeOrderDA = new PlaceOrderDA();
 
         private readonly IMapper _mapper;
         public AdminHome_BLL(IMapper mapper)
@@ -99,6 +100,19 @@ namespace AmazonDream.BLL
             return model;
         }
 
+        public List<ProductModel> TrendRequestProduct()         //Get Trending Product
+        {
+            var model = new List<ProductModel>();
+            var entity = _productDA.TrendRequestProduct();
+
+            foreach (var i in entity)
+            {
+                model.Add(_mapper.Map<Product, ProductModel>(i));
+            }
+
+            return model;
+        }
+
 
         public Boolean TrendResponse(string value,int id)
         {
@@ -114,6 +128,23 @@ namespace AmazonDream.BLL
                 return true;
             }
             return false;
+        }
+
+
+        public List<RecivedOrderModel> OrderRecived()
+        {
+            var entityList = _placeOrderDA.OrderRecived();
+            var modelList = new List<RecivedOrderModel>();
+
+            foreach (var entity in entityList)
+            {
+                var model = _mapper.Map<PlacedOrder, RecivedOrderModel>(entity);
+                var product = _productDA.GetProduct(entity.Product_ID);
+                model.ProductName = product.ProductName;
+                model.Product_ID = product.ID;
+                modelList.Add(model);
+            }
+            return modelList;
         }
 
 

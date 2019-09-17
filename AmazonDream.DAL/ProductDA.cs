@@ -54,6 +54,11 @@ namespace AmazonDream.DAL
             return db.Product.Where(p => p.ProductTrend == "True").ToList();
         }
 
+        public List<Product> TrendRequestProduct()              //Get Trend Request Product
+        {
+            return db.Product.Where(p => p.ProductTrend == "Requested").ToList();
+        }
+
         public List<Product> GetProductsBySearch(string searchTag)          //find a product by search tag
         {
             return db.Product.Where(p => p.ProductName.Contains(searchTag) || p.ProductCategory == searchTag || p.ProductSubCategory == searchTag).ToList();

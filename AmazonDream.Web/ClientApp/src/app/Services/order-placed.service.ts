@@ -25,6 +25,11 @@ export class OrderPlacedService {
   }
 
 
+  placedOrderAdmin(): Observable<any> {
+    return this.http.get(this._constant.baseUrl + 'AdminHome/PlacedOrder');    //Give all placed order all (for admin)
+
+  }
+
 
 
 
