@@ -3,6 +3,7 @@
 
   {{product |json}}
   <button (click)="addProductToKart(product.id)">Add To Kart</button>
+  <button (click)="addWish(product.id)">Add To Wish</button>
 </li>
 
 <li *ngFor="let pic of productPicture">

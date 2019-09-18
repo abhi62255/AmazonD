@@ -26,6 +26,11 @@ namespace AmazonDream.Api.Controllers.Customer
             return obj.GetPrevisitedProducts(id);
         }
 
+        //public IActionResult setPrevisit(long Customer_ID,long Product_ID)
+        //{
+        //    obj.setPrevisit(Customer_ID, Product_ID);
+        //}
+
 
 
     }

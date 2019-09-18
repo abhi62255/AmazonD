@@ -1,0 +1,14 @@
+<p>wish works!</p>
+<li *ngFor="let wish of wishlist">
+  {{wish | json}}
+  <button (click)="removeWish(wish.seller_ID)">Remove</button>    <!-- seller_ID is wish id-->
+
+  <button (click)="productDetails(wish.id)">Details</button>
+
+
+
+  <!--<button (click)="deleteProduct(product.id)">Delete</button>
+  <button (click)="trendRequest(product.id)">Trend Request</button>
+  <button (click)="removeWish(wish.id)">Update values</button>-->
+
+</li>

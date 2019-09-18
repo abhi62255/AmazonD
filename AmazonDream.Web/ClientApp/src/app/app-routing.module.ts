@@ -29,6 +29,7 @@ import { AddressComponent } from './Common/address/address.component';
 import { AddAddressComponent } from './Common/address/add-address/add-address.component';
 import { PaymentModeComponent } from './Common/payment-mode/payment-mode.component';
 import { VerifyOrderComponent } from './Common/verify-order/verify-order.component';
+import { WishComponent } from './Common/wish/wish.component';
 
 
 const routes: Routes = [
@@ -53,7 +54,8 @@ const routes: Routes = [
           { path: 'VerifyOrder', component: VerifyOrderComponent }
 
         ]
-      }
+      },
+      { path: 'Wish', component: WishComponent }
 
     ]
   },

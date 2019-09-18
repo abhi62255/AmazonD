@@ -40,7 +40,8 @@ namespace AmazonDream.BLL
             foreach(var wish in entity)
             {
                 var product = _productDA.GetProduct(wish.Product_ID);           //finding product by product ID
-                var modelP = _mapper.Map<Product, ProductModel>(product);       //converting product to productModel    
+                var modelP = _mapper.Map<Product, ProductModel>(product);       //converting product to productModel   
+                modelP.Seller_ID = wish.ID;             //assign wish id to seller ID(need to change it later)
                 productList.Add(modelP);
             }
             return productList;

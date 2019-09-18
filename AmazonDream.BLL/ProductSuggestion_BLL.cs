@@ -36,14 +36,6 @@ namespace AmazonDream.BLL
                 AddProductToSuggestionList(products);
 
 
-            var wishlists = _wishlistDA.GetWishlist(id);             //by wishlist
-            products = null;
-            foreach(var wish in wishlists)
-            {
-                var product = _productDA.GetProduct(wish.Product_ID);
-                products.Add(product);
-            }
-
             if (products != null)
                 AddProductToSuggestionList(products);
             

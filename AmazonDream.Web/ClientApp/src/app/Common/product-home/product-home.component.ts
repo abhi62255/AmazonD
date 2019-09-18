@@ -3,6 +3,8 @@ import { ConstantsService } from 'src/app/Services/constants.service';
 import { ProductService } from 'src/app/Services/product.service';
 import { KartService } from 'src/app/Services/kart.service';
 import { ToastrService } from 'ngx-toastr';
+import { WishListService } from 'src/app/Services/wish-list.service';
+import { Wish } from 'src/app/Model/Wish';
 
 
 @Component({
@@ -12,11 +14,12 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ProductHomeComponent implements OnInit {
 
-  constructor(public _constant: ConstantsService, public _product: ProductService, public _kart: KartService, private toastr: ToastrService) { }
+  constructor(public _constant: ConstantsService, public _product: ProductService, public _kart: KartService, private toastr: ToastrService, private _wish: WishListService) { }
 
   public product: any;
   public productPicture: any;
   public result: string;
+  public wish = new Wish();
 
   getProductDetails() {
     this._product.getProductDetails()
@@ -41,6 +44,14 @@ export class ProductHomeComponent implements OnInit {
           this.toastr.error(this.result);
       }
     );
+  }
+
+  addWish(id: number) {
+    this.wish.Product_ID = id;
+    this.wish.Customer_ID = <number><any>localStorage.getItem("Customer_ID");
+    this._wish.addWish(this.wish).subscribe();
+    this.toastr.info("Added to Wish");
+
   }
 
   ngOnInit() {
