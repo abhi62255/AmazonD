@@ -1,0 +1,13 @@
+<p>previsit works!</p>
+<li *ngFor="let pre of preVisit">
+  {{pre | json}}
+
+  <button (click)="productDetails(pre.id)">Details</button>
+
+
+
+  <!--<button (click)="deleteProduct(product.id)">Delete</button>
+  <button (click)="trendRequest(product.id)">Trend Request</button>
+  <button (click)="removeWish(wish.id)">Update values</button>-->
+
+</li>

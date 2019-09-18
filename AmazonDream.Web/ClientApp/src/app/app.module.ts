@@ -42,6 +42,7 @@ import { AddAddressComponent } from './Common/address/add-address/add-address.co
 import { PaymentModeComponent } from './Common/payment-mode/payment-mode.component';
 import { VerifyOrderComponent } from './Common/verify-order/verify-order.component';
 import { WishComponent } from './Common/wish/wish.component';
+import { PrevisitComponent } from './Common/previsit/previsit.component';
 
 
 @NgModule({
@@ -76,7 +77,8 @@ import { WishComponent } from './Common/wish/wish.component';
     AddAddressComponent,
     PaymentModeComponent,
     VerifyOrderComponent,
-    WishComponent
+    WishComponent,
+    PrevisitComponent
   ],
   imports: [
     BrowserModule,

@@ -30,6 +30,7 @@ import { AddAddressComponent } from './Common/address/add-address/add-address.co
 import { PaymentModeComponent } from './Common/payment-mode/payment-mode.component';
 import { VerifyOrderComponent } from './Common/verify-order/verify-order.component';
 import { WishComponent } from './Common/wish/wish.component';
+import { PrevisitComponent } from './Common/previsit/previsit.component';
 
 
 const routes: Routes = [
@@ -55,7 +56,9 @@ const routes: Routes = [
 
         ]
       },
-      { path: 'Wish', component: WishComponent }
+      { path: 'Wish', component: WishComponent },
+      { path: 'Previsit', component: PrevisitComponent }
+
 
     ]
   },

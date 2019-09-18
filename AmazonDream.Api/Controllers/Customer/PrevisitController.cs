@@ -27,7 +27,7 @@ namespace AmazonDream.Api.Controllers.Customer
         }
 
         [HttpPost("{Customer_ID}/{Product_ID}")]
-        public IActionResult setPrevisit(long Customer_ID, long Product_ID)
+        public IActionResult setPrevisit(long Customer_ID, long Product_ID)     //set previsit
         {
             if(obj.setPrevisit(Customer_ID, Product_ID))
             {
