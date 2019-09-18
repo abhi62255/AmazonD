@@ -35,6 +35,12 @@ import { ProductHomeComponent } from './Common/product-home/product-home.compone
 import { ProductsComponent } from './Common/products/products.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { LogoutComponent } from './Common/logout/logout.component';
+import { KartComponent } from './Common/kart/kart.component';
+import { AddressComponent } from './Common/address/address.component';
+import { AddAddressComponent } from './Common/address/add-address/add-address.component';
+import { PaymentModeComponent } from './Common/payment-mode/payment-mode.component';
+import { VerifyOrderComponent } from './Common/verify-order/verify-order.component';
 
 
 @NgModule({
@@ -62,7 +68,13 @@ import { ToastrModule } from 'ngx-toastr';
     TrendRequestComponent,
     OrdersComponent,
     ProductHomeComponent,
-    ProductsComponent
+    ProductsComponent,
+    LogoutComponent,
+    KartComponent,
+    AddressComponent,
+    AddAddressComponent,
+    PaymentModeComponent,
+    VerifyOrderComponent
   ],
   imports: [
     BrowserModule,

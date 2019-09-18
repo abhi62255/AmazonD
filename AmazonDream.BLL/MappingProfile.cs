@@ -53,6 +53,9 @@ namespace AmazonDream.BLL
             CreateMap<Seller, Seller_AddressModel>();
             CreateMap<Seller_AddressModel, Address>();
             CreateMap<Address, Seller_AddressModel>();
+            
+            CreateMap<ProductAndKartModel, Product>();
+            CreateMap<Product, ProductAndKartModel>();
 
 
 

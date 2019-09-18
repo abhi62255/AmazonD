@@ -28,7 +28,6 @@ namespace AmazonDream.DAL
                 try
                 {
                     db.SaveChanges();
-                    return true;
                 }
                 catch { return false; }
             }

@@ -1,0 +1,12 @@
+<p>address works!</p>
+<li *ngFor="let address of addressList">
+  {{address | json}}
+  <button (click)="deleteAddress(address.id)">Remove</button>
+  <button (click)="selectAddress(address.id)">Select</button>
+
+</li>
+
+<button (click)="addAddress()">Add Address</button>
+
+<router-outlet></router-outlet>
+

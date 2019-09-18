@@ -57,5 +57,11 @@ namespace AmazonDream.Api.Controllers.Common
             return BadRequest();
         }
 
+        [HttpGet("{id}")]
+        public AddressModel GetAddress(long id)                 //return address by address ID
+        {
+            return obj.GetAddress(id);
+        }
+
     }
 }

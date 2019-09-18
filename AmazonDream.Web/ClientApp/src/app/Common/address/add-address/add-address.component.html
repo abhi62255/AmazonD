@@ -1,0 +1,12 @@
+<p>add-address works!</p>
+<form (ngSubmit)="addAddress(f)" #f=ngForm>
+  <input type="text" name="AddressLine" placeholder="Address Line" ngModel />
+  <input type="text" name="City" placeholder="City" ngModel />
+  <input type="text" name="State" placeholder="State" ngModel />
+  <input type="number" name="PostalCode" placeholder="Postal Code" ngModel />
+  <input type="text" name="AddressType" placeholder="Address Type" ngModel />
+  <input type="hidden" name="Customer_ID" placeholder="Address Line" ngModel />
+  <input type="hidden" name="Seller_ID" placeholder="Address Line" ngModel />
+  <button type="submit" value="Add">Add</button>
+
+</form>

@@ -63,5 +63,12 @@ namespace AmazonDream.BLL
             return false;
         }
 
+        public AddressModel GetAddress(long id)             //return address by address ID
+        {
+            var entity = _addressDA.GetAddress(id);
+            var model = _mapper.Map<Address, AddressModel>(entity);
+            return model;
+        }
+
     }
 }

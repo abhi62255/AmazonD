@@ -27,27 +27,22 @@ namespace AmazonDream.Api.Controllers.Customer
 
         // POST: api/CustomerKart/add
         [HttpPost("add")]
-        public IActionResult Post([FromBody] KartModel model)           //Adding product to kart
+        public string Post([FromBody] KartModel model)           //Adding product to kart
         {
-            if(obj.AddToKart(model))
-            {
-                return Ok();
-            }
-            return BadRequest();
+            var result = obj.AddToKart(model);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(result);
+
         }
 
-        // PUT: api/CustomerKart/Increse
+        // PUT: api/CustomerKart/Increse/1
         [HttpPut("Increse/{id}")]                                       //incresing product Quantity in kart
-        public IActionResult PutIncreseKartQuantity(long id)
+        public string PutIncreseKartQuantity(long id)
         {
-            if(obj.IncreseKartQuantity(id))
-            {
-                return Ok();
-            }
-            return BadRequest();
+            var result =obj.IncreseKartQuantity(id);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(result);
         }
 
-        // PUT: api/CustomerKart/Decrese
+        // PUT: api/CustomerKart/Decrese/1
         [HttpPut("Decrese/{id}")]                                       //Decresing product Quantity in kart
         public IActionResult PutDecreseKartQuantity(long id)
         {
@@ -78,6 +73,12 @@ namespace AmazonDream.Api.Controllers.Customer
                 return Ok();
             }
             return BadRequest();
+        }
+
+        [HttpGet("{id}")]
+        public List<ProductAndKartModel> GetKartForCustomer(long id)
+        {
+            return obj.GetKartForCustomer(id);
         }
 
 

@@ -1,0 +1,14 @@
+<p>kart works!</p>
+<li *ngFor="let product of productList">
+  {{product | json}}
+
+  <button (click)="updateKartQuantity('Increse',product.id)">+</button>
+  <button (click)="updateKartQuantity('Decrese',product.id)">-</button>
+  <button (click)="removeItemFromKart(product.id)">Remove</button>
+</li>
+Total Amount:{{TotalAmount}}
+
+<button (click)="clearKart()">Clear Kart</button>
+<button (click)="next()">Next</button>
+
+<router-outlet></router-outlet>

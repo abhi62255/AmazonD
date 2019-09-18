@@ -16,6 +16,7 @@ export class ProductHomeComponent implements OnInit {
 
   public product: any;
   public productPicture: any;
+  public result: string;
 
   getProductDetails() {
     this._product.getProductDetails()
@@ -29,11 +30,15 @@ export class ProductHomeComponent implements OnInit {
   }
 
   addProductToKart(id: number) {
-    console.log("compone")
+    console.log("component");
     this._kart.addProductToKart(id).subscribe(
       responseData => {
         console.log(responseData)
-        this.toastr.success("Product Added To Kart");
+        this.result = <string><any>responseData;      //errro on not available
+        if (this.result == "Product Added to Kart")
+          this.toastr.success(this.result);
+        else
+          this.toastr.error(this.result);
       }
     );
   }

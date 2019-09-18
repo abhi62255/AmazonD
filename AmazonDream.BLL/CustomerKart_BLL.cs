@@ -19,7 +19,7 @@ namespace AmazonDream.BLL
             _mapper = mapper;
         }
 
-        public Boolean AddToKart(KartModel model)           //Adding product to kart
+        public string AddToKart(KartModel model)           //Adding product to kart
         {
             var productEntity = ProductAvailability(model.Product_ID, model.Quantity);
             if (productEntity != null)                                                          //Checking Product Availability
@@ -31,12 +31,12 @@ namespace AmazonDream.BLL
 
                     if (obj.AddToKart(entity, productEntity))
                     {
-                        return true;
+                        return "Product Added to Kart";
                     }
-                    return false;
+                    return "Bad Request";
 
             }
-            return false;
+            return "Product Not Available";
         }
 
         public Product ProductAvailability(long id, int quantity)               //Checking Product Availability
@@ -53,7 +53,7 @@ namespace AmazonDream.BLL
             return null;
         }
 
-        public Boolean IncreseKartQuantity(long id)         //Incresing Quantity By One
+        public string IncreseKartQuantity(long id)         //Incresing Quantity By One
         {
             var kart = obj.GetKart(id);
             if (kart != null)
@@ -65,22 +65,27 @@ namespace AmazonDream.BLL
 
                     kart.Quantity += 1;
                     if (obj.UpdateKart(kart, product))
-                        return true;
+                        return "true";
                 }
+                return "Product Not Available";
             }
-            return false;
+            return "false";
         }
         public Boolean DecreseKartQuantity(long id)             //Decresing Quantity By One
         {
             var kart = obj.GetKart(id);
             if (kart != null)
             {
-                var product = _productDA.GetProduct(kart.Product_ID);          //getting product whose ProductQuantityInKart in kart need to be alter
-                product.ProductQuantityInKart -= 1;
+                if (kart.Quantity != 0)
+                {
+                    var product = _productDA.GetProduct(kart.Product_ID);          //getting product whose ProductQuantityInKart in kart need to be alter
+                    product.ProductQuantityInKart -= 1;
 
-                kart.Quantity -= 1;
-                if (obj.UpdateKart(kart,product))
-                    return true;
+                    kart.Quantity -= 1;
+                    if (obj.UpdateKart(kart, product))
+                        return true;
+                }
+                return true;
             }
             return false;
         }
@@ -118,7 +123,29 @@ namespace AmazonDream.BLL
             return false;
         }
 
+        public List<ProductAndKartModel> GetKartForCustomer(long id)
+        {
+            var kart = obj.GetCustomerKart(id);
+            var _productAndKartList = new List<ProductAndKartModel>();
 
+            foreach(var kartItem in kart)
+            {
+                var product = _productDA.GetProduct(kartItem.Product_ID);
+                var model = new ProductAndKartModel();
+                model = _mapper.Map<Product, ProductAndKartModel>(product);
+                model.Quantity = kartItem.Quantity;
+                model.DateTime = kartItem.DateTime;
+                model.Product_ID = product.ID;
+                model.ID = kartItem.ID;
+                model.Amount = (model.ProductPrice - (model.ProductPrice / model.ProductDiscount))*model.Quantity;  //Calculating amout for product
+
+                _productAndKartList.Add(model);
+
+            }
+            return _productAndKartList;
+
+
+        }
 
 
 

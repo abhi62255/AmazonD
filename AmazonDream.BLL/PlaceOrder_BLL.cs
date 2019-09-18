@@ -59,6 +59,7 @@ namespace AmazonDream.BLL
                 order.Amount = k.Quantity * ActualPrice;
                 order.Product_ID = k.Product_ID;
                 product.ProductQuantityInKart -= k.Quantity;            //releasing product IN kart value
+                product.ProductQuantity -= k.Quantity;                  //Normelizing Quantity
                 _kartDA.RemoveKartItem(k.ID,product);                   //remove from kart and updating product IN Kart value
                 orders.Add(order);
             }
