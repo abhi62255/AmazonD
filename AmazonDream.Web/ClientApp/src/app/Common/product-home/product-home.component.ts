@@ -5,6 +5,7 @@ import { KartService } from 'src/app/Services/kart.service';
 import { ToastrService } from 'ngx-toastr';
 import { WishListService } from 'src/app/Services/wish-list.service';
 import { Wish } from 'src/app/Model/Wish';
+import { PrevisitService } from 'src/app/Services/previsit.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ import { Wish } from 'src/app/Model/Wish';
 })
 export class ProductHomeComponent implements OnInit {
 
-  constructor(public _constant: ConstantsService, public _product: ProductService, public _kart: KartService, private toastr: ToastrService, private _wish: WishListService) { }
+  constructor(public _constant: ConstantsService, public _product: ProductService, public _kart: KartService, private toastr: ToastrService, private _wish: WishListService, private _previsit: PrevisitService) { }
 
   public product: any;
   public productPicture: any;
@@ -22,6 +23,7 @@ export class ProductHomeComponent implements OnInit {
   public wish = new Wish();
 
   getProductDetails() {
+    this._previsit.addPrevisit().subscribe();
     this._product.getProductDetails()
       .subscribe((data: any) => this.product = data);
     console.log(this.product);

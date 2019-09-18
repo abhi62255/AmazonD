@@ -89,5 +89,6 @@ export class ProductService {
     return this.http.get(this._constant.baseUrl + 'product/picture/' + localStorage.getItem("Product_ID"));    //Give product pictures
   }
 
+ 
 
 }

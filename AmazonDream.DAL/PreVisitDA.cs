@@ -30,5 +30,14 @@ namespace AmazonDream.DAL
             return products;
         }
 
+        public Boolean checkExistance(long Customer_ID, long Product_ID)
+        {
+            var model = db.PreVisit.Where(p => p.Product_ID == Product_ID & p.Customer_ID == Customer_ID).FirstOrDefault();
+
+            if (model == null)
+                return false;
+            return true;
+        }
+
     }
 }
