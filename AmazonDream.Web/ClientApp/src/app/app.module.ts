@@ -48,6 +48,7 @@ import { SimilarProductsComponent } from './Common/similar-products/similar-prod
 import { RefreshComponentComponent } from './Common/refresh-component/refresh-component.component';
 import { RouterModule } from '@angular/router';
 import { NotificationService } from './Services/notification.service';
+import { OrderHistoryComponent } from './Common/order-history/order-history.component';
 
 
 @NgModule({
@@ -86,7 +87,8 @@ import { NotificationService } from './Services/notification.service';
     PrevisitComponent,
     ReviewsComponent,
     SimilarProductsComponent,
-    RefreshComponentComponent
+    RefreshComponentComponent,
+    OrderHistoryComponent
   ],
   imports: [
     BrowserModule,

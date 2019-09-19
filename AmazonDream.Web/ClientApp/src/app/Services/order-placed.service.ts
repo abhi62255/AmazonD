@@ -29,6 +29,11 @@ export class OrderPlacedService {
 
   }
 
+  placedOrderCustomer(): Observable<any> {
+    return this.http.get(this._constant.baseUrl + 'PlaceOrder/' + localStorage.getItem("Customer_ID"));    //Give all placed order all (for admin)
+
+  }
+
 
 
 

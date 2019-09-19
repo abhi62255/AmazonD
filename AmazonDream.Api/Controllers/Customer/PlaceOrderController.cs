@@ -27,7 +27,14 @@ namespace AmazonDream.Api.Controllers.Customer
         {
             if(obj.PlaceOrder(model))
                 return Ok();
-            return BadRequest("abcd");
+            return BadRequest();
+        }
+
+        // GET: api/PlaceOrder/1
+        [HttpGet("{id}")]
+        public List<RecivedOrderModel> GetPlacedOrder(long id)
+        {
+           return obj.GetplacedOrder(id);
         }
         
     }

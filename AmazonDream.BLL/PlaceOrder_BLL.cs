@@ -14,6 +14,7 @@ namespace AmazonDream.BLL
         KartDA _kartDA = new KartDA();
         AddressDA _addressDA = new AddressDA();
         ProductDA _productDA = new ProductDA();
+        SellerDA _sellerDA = new SellerDA();
 
         private readonly IMapper _mapper;
         public PlaceOrder_BLL(IMapper mapper)
@@ -68,6 +69,25 @@ namespace AmazonDream.BLL
             return false;
         }
 
+
+        public List<RecivedOrderModel> GetplacedOrder(long id)
+        {
+            var entityList = _placeOrderDA.OrderPlaced(id);
+            var modelList = new List<RecivedOrderModel>();
+
+            foreach (var entity in entityList)
+            {
+                var model = _mapper.Map<PlacedOrder, RecivedOrderModel>(entity);
+                var product = _productDA.GetProduct(entity.Product_ID);
+                model.ProductName = product.ProductName;
+                model.Product_ID = product.ID;
+                model.Seller_ID = product.Seller_ID;
+                var seller = _sellerDA.GetSellerByID(product.Seller_ID);
+                model.SellerName = seller.Name;
+                modelList.Add(model);
+            }
+            return modelList;
+        }
 
 
     }

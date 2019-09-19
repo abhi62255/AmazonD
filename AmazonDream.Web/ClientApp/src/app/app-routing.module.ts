@@ -34,6 +34,7 @@ import { PrevisitComponent } from './Common/previsit/previsit.component';
 import { ReviewsComponent } from './Common/reviews/reviews.component';
 import { SimilarProductsComponent } from './Common/similar-products/similar-products.component';
 import { RefreshComponentComponent } from './Common/refresh-component/refresh-component.component';
+import { OrderHistoryComponent } from './Common/order-history/order-history.component';
 
 
 const routes: Routes = [
@@ -66,7 +67,9 @@ const routes: Routes = [
         ]
       },
       { path: 'Wish', component: WishComponent },
-      { path: 'Previsit', component: PrevisitComponent }
+      { path: 'Previsit', component: PrevisitComponent },
+      { path: 'OrderHistory', component: OrderHistoryComponent }
+
 
 
     ]
