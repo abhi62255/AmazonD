@@ -46,6 +46,8 @@ import { PrevisitComponent } from './Common/previsit/previsit.component';
 import { ReviewsComponent } from './Common/reviews/reviews.component';
 import { SimilarProductsComponent } from './Common/similar-products/similar-products.component';
 import { RefreshComponentComponent } from './Common/refresh-component/refresh-component.component';
+import { RouterModule } from '@angular/router';
+import { NotificationService } from './Services/notification.service';
 
 
 @NgModule({
@@ -92,13 +94,15 @@ import { RefreshComponentComponent } from './Common/refresh-component/refresh-co
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    RouterModule
   ],
   providers: [ConstantsService,
     ProductService,
     LoginService,
     CustomerRegistrationService,
-    SellerRegistrationService
+    SellerRegistrationService,
+    NotificationService
   ],
   bootstrap: [AppComponent]
 })
