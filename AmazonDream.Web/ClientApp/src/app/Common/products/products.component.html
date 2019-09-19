@@ -1,8 +1,47 @@
+<!--Slider  -->
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2019/9/18/f0441b89-a211-49a7-af9f-54d3eb9da18f1568811638194-TT_Desk_Banner.jpg"
+           alt="Los Angeles" width="1100" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2019/9/18/78eca367-575b-47eb-a934-feecf84249781568801141536-Desktop-banner-for-him.jpG"
+           alt="Chicago" width="1100" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2019/9/18/f0885a7d-18a3-472c-bd7e-c89ab5d831f41568801141553-Desktop-banner-for-her.jpG"
+           alt="New York" width="1100" height="500">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+
+
+<!--Slider  -->
+
 <p>products works!</p>
 <li *ngFor="let product of productList">
   {{product | json}}
   <button (click)="productHome(product.id)">Details</button>
- 
+
 
 </li>
 <p>ALL</p>

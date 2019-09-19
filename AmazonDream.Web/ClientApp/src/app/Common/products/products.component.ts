@@ -17,30 +17,40 @@ export class ProductsComponent implements OnInit,OnDestroy {
   public productListAll: any[];
   public Name: string;
   public subscriptions: any[];
+  public ProductListStable: any[];
+  public ProductListAllStable: any[];
+
 
 
 
   productSuggestionKnown() {          //suggested product for known user
     this._productSuggestion.GetSuggestedProductsKnownUser()
       .subscribe((data: any[]) => {
-        this.productList = data
+        this.ProductListStable = data;
+        this.productList = this.ProductListStable;
       });
 
-    console.log(this.productList);
+    console.log(this.ProductListStable);
   }
 
   productSuggestionUnKnown() {      //suggested product for Unknown user
     this._productSuggestion.GetSuggestedProductsUnknownUser()
-      .subscribe((data: any[]) => this.productList = data);
+      .subscribe((data: any[]) => {
+        this.ProductListStable = data;
+        this.productList = this.ProductListStable;
 
-    console.log(this.productList);
+      });
+
+    console.log(this.ProductListStable);
   }
 
 
   productSuggestionAll() {      //suggested product for Unknown user
     this._productSuggestion.GetSuggestedProductsAll()
       .subscribe((data: any[]) => {
-        this.productListAll = data
+        this.ProductListAllStable = data;
+        this.productListAll = this.ProductListAllStable;
+
       });
 
     console.log(this.productList);
@@ -50,17 +60,6 @@ export class ProductsComponent implements OnInit,OnDestroy {
   productHome(id: number) {
     localStorage.setItem("Product_ID", <string><any>id);
     this.router.navigate(['HomePage/ProductHome']);
-  }
-
-  Search() {
-    console.log("SEARCH");
-    if (this.Name !== '') {
-      this.productList = this.productList.filter(res => {
-        return res.productName.toLocaleLowerCase().match(this.Name.toLocaleLowerCase());
-      });
-    } else if (this.Name === '') {
-      this.ngOnInit();
-    }
   }
 
 
@@ -78,14 +77,17 @@ export class ProductsComponent implements OnInit,OnDestroy {
 
     this.subscriptions.push(
       this._notificationService.productAddedToCartNotification.subscribe((SearchTag: string) => {
-        
+        this.productList = this.ProductListStable;
         if (SearchTag != '') {        //need to handel backspace problem
+          this.productListAll = null;
           this.productList = this.productList.filter(res => {
             return res.productName.toLocaleLowerCase().match(SearchTag.toLocaleLowerCase());
           });
         } else if (SearchTag == '') {
           //this.productList = this.productList;
-          this.ngOnInit();
+          //this.ngOnInit();
+          this.productListAll = this.ProductListAllStable;
+          this.productList = this.ProductListStable;
         }
         console.log(this.productList);
 
