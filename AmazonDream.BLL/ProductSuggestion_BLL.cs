@@ -88,6 +88,23 @@ namespace AmazonDream.BLL
             }
         }
 
+        public List<ProductModel> SimilarProducts(long id)
+        {
+            var productModelList = new List<ProductModel>();
+            var productByID = _productDA.GetProduct(id);
+            var SimilarProductList = _productDA.GetProductsBYSubCategory(productByID.ProductSubCategory);
+
+            foreach(var product in SimilarProductList)
+            {
+                var model = _mapper.Map<Product, ProductModel>(product);
+                productModelList.Add(model);
+            }
+            return productModelList;
+
+        }
+
+
+
         public ProductModel GetProduct(long id)                 //get Product
         {
             var entity = _productDA.GetProduct(id);

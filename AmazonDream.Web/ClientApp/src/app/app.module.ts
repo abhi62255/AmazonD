@@ -43,6 +43,9 @@ import { PaymentModeComponent } from './Common/payment-mode/payment-mode.compone
 import { VerifyOrderComponent } from './Common/verify-order/verify-order.component';
 import { WishComponent } from './Common/wish/wish.component';
 import { PrevisitComponent } from './Common/previsit/previsit.component';
+import { ReviewsComponent } from './Common/reviews/reviews.component';
+import { SimilarProductsComponent } from './Common/similar-products/similar-products.component';
+import { RefreshComponentComponent } from './Common/refresh-component/refresh-component.component';
 
 
 @NgModule({
@@ -78,7 +81,10 @@ import { PrevisitComponent } from './Common/previsit/previsit.component';
     PaymentModeComponent,
     VerifyOrderComponent,
     WishComponent,
-    PrevisitComponent
+    PrevisitComponent,
+    ReviewsComponent,
+    SimilarProductsComponent,
+    RefreshComponentComponent
   ],
   imports: [
     BrowserModule,

@@ -71,12 +71,12 @@ namespace AmazonDream.DAL
 
         public List<Product> GetProductsBYCategory(string category)             //To suggest similar products in single produts details
         {
-            return db.Product.Where(p => p.ProductCategory == category).ToList();
+            return db.Product.Where(p => p.ProductCategory == category && p.ProductStatus == "Accepted").ToList();
         }
 
         public List<Product> GetProductsBYSubCategory(string SubCategory)             //To suggest similar products by sub category
         {
-            return db.Product.Where(p => p.ProductSubCategory == SubCategory).ToList();
+            return db.Product.Where(p => p.ProductSubCategory == SubCategory && p.ProductStatus == "Accepted").ToList();
         }
 
 

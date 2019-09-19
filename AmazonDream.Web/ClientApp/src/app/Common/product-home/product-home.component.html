@@ -10,8 +10,16 @@
   <img src="../../../assets/ProductPicture/{{pic}}" alt="Image could not load" height="300" width="300" />
 </li>
 
-
-
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" routerLink="Reviews">Reviews</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="SimilarProducts" >Related Products</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>
 <!--<button (click)="deleteProduct(product.id)">Delete</button>
 <button (click)="trendRequest(product.id)">Trend Request</button>
 <button (click)="constProductID(product.id)">Update values</button>-->
+

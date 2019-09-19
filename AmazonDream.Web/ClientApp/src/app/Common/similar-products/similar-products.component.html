@@ -1,0 +1,6 @@
+<p>similar-products works!</p>
+<li *ngFor="let product of productList">
+  {{product | json}}
+
+  <button (click)="productHome(product.id)">Details</button>
+</li>

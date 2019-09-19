@@ -17,14 +17,10 @@ export class AddAddressComponent implements OnInit {
     this._address.addAddress(nf.value).subscribe(
       responseData => {
         console.log(responseData)
-       
+        this.router.navigateByUrl('', { skipLocationChange: true }).then(() =>
+          this.router.navigate(['HomePage/Kart/Address'])); 
       }
     );
-
-    this._address.customerAddress().subscribe(response=>{ console.log("loadSecond") }); //to refresh address data(but not working) 
-
-    this.router.navigate(['HomePage/Kart/Address']);
-
   }
 
   ngOnInit() {

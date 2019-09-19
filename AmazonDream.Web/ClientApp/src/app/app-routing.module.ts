@@ -31,6 +31,9 @@ import { PaymentModeComponent } from './Common/payment-mode/payment-mode.compone
 import { VerifyOrderComponent } from './Common/verify-order/verify-order.component';
 import { WishComponent } from './Common/wish/wish.component';
 import { PrevisitComponent } from './Common/previsit/previsit.component';
+import { ReviewsComponent } from './Common/reviews/reviews.component';
+import { SimilarProductsComponent } from './Common/similar-products/similar-products.component';
+import { RefreshComponentComponent } from './Common/refresh-component/refresh-component.component';
 
 
 const routes: Routes = [
@@ -40,7 +43,13 @@ const routes: Routes = [
     path: 'HomePage', component: HomePageComponent,
     children: [
       { path: 'Product', component: ProductsComponent },
-      { path: 'ProductHome', component: ProductHomeComponent },
+      {
+        path: 'ProductHome', component: ProductHomeComponent,
+        children: [
+          { path: 'Reviews', component: ReviewsComponent },
+          { path: 'SimilarProducts', component: SimilarProductsComponent }
+        ]
+      },
       { path: 'Logout', component: LogoutComponent },
       {
         path: 'Kart', component: KartComponent,
@@ -65,6 +74,9 @@ const routes: Routes = [
   { path: 'HomePage/Login', component: LoginComponent },
   { path: 'HomePage/CustomerRegistration', component: CustomerRegistrationComponent },
   { path: 'HomePage/SellerRegistration', component: SellerRegistrationComponent },
+  { path: 'HomePage/RefreshComponent', component: RefreshComponentComponent },
+
+
 
 
   {

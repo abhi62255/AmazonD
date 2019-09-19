@@ -28,10 +28,10 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
-    <ul class="navbar-nav mr-auto">
+    <ul class="nav navbar-nav navbar-right">
       <li class="nav-item">
         <a class="nav-link" routerLink="Login">Login</a>
       </li>
@@ -60,9 +60,7 @@
 
 
 
-
-
-
+<br /><hr />
 
 
 
@@ -76,7 +74,7 @@
 <button routerLink="Wish">Wishlist</button>
 <button routerLink="Previsit">Previsit</button>
 
-<br /><hr />
+
 
 
 
@@ -84,6 +82,61 @@
 
 <router-outlet></router-outlet>
 
-<footer>
-  <button routerLink="SellerRegistration">Register As Seller</button>
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small teal pt-4 ">
+
+  <!-- Footer Text -->
+  <div class="container-fluid text-center text-md-left" style="background-color:#0b7838">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold">About</h5>
+        <p>
+          AmazonDream.com, Inc., is an American multinational technology company based in Seattle,
+          Washington, that focuses on e-commerce, cloud computing, digital streaming,
+          and artificial intelligence. It is considered one of the Big Four technology
+          companies along with Google, Apple, and Facebook.
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mb-md-0 mb-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold">Contact Us</h5>
+        <pre>
+          Number of employees: 6,47,500 (2018)
+          Customer service: 1800 3000 9009
+          CEO: Abhishek Sharma
+          Subsidiaries: Audible, Zappos, AbeBooks, Amazon.ae.
+        </pre>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Text -->
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3"   style="background-color:#05632c">
+    © 2018 Copyright:
+     AmazonDream.com
+  </div>
+  <!-- Copyright -->
+
 </footer>
+<!-- Footer -->

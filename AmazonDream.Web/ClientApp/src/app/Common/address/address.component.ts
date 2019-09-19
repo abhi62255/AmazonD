@@ -33,6 +33,8 @@ export class AddressComponent implements OnInit {
 
   addAddress() {
     this.router.navigate(['HomePage/Kart/Address/AddAddress']);
+    this.ngOnInit();
+
   }
 
 

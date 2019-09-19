@@ -40,5 +40,11 @@ namespace AmazonDream.Api.Controllers.Customer
             return obj.GetProducts();
         }
 
+        [HttpGet("similar/{id}")]
+        public List<ProductModel> GetSimilarProducts(long id)                 //Get Similar products
+        {
+            return obj.SimilarProducts(id);
+        }
+
     }
 }

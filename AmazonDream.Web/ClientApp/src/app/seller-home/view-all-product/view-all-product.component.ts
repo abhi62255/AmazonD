@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/Services/product.service';
 import { ConstantsService } from 'src/app/Services/constants.service';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-view-all-product',
@@ -9,8 +9,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./view-all-product.component.css']
 })
 export class ViewAllProductComponent implements OnInit {
+    mySubscription: import("D:/Sagar Rout/AmazonDream-master/AmazonDream.Web/ClientApp/node_modules/rxjs/internal/Subscription").Subscription;
 
-  constructor(private _productService: ProductService, private _constant: ConstantsService, private router: Router) { }
+  constructor(private _productService: ProductService, private _constant: ConstantsService, private router: Router) {
+
+    this.router.routeReuseStrategy.shouldReuseRoute = function () {
+      return false;
+    };
+
+    this.mySubscription = this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        // Trick the Router into believing it's last link wasn't previously loaded
+        this.router.navigated = false;
+      }
+    });
+
+  }
 
   public productList: any[];
   viewAllProduct() {
@@ -47,6 +61,12 @@ export class ViewAllProductComponent implements OnInit {
 
   ngOnInit() {
     this.viewAllProduct();
+  }
+
+  ngOnDestroy() {
+    if (this.mySubscription) {
+      this.mySubscription.unsubscribe();
+    }
   }
 
 }
