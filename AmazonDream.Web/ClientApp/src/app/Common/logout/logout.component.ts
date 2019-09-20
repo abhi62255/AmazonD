@@ -14,6 +14,8 @@ export class LogoutComponent implements OnInit {
     localStorage.removeItem("Customer_ID");
     localStorage.removeItem("Product_ID");
     localStorage.removeItem("Seller_ID");
+    localStorage.removeItem("Login");
+
     this.router.navigate(['HomePage/Login']);
   }
 

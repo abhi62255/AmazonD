@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { LoginService } from 'src/app/Services/login.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private login: LoginService, private router: Router) { }
+  constructor(private login: LoginService, private router: Router, private toastr: ToastrService) { }
 
   user: any;
 
@@ -25,20 +26,22 @@ export class LoginComponent implements OnInit {
         }
       
         
-
+        localStorage.removeItem("Seller_ID");
+        localStorage.removeItem("Customer_ID");
         if (this.user == null) {
-          localStorage.removeItem("Seller_ID");
-          localStorage.removeItem("Customer_ID");
           console.log("Wrong User Crendtials");
+          this.toastr.error("Wrong User Crendtials");
+        
         }
         else if (this.user[0] == "Admin") {
           console.log("Admin");
+          localStorage.setItem("Login", "true");
           this.router.navigate(['AdminHome'])
         }
         else if (this.user[0] == "Seller") {
           console.log("Seller");
-          localStorage.removeItem("Customer_ID");
           localStorage.setItem("Seller_ID", this.user[1]);
+          localStorage.setItem("Login", "true");
           this.router.navigate(['SellerHome'])
         }
         else if (this.user[0] == "SellerPending") {
@@ -49,8 +52,8 @@ export class LoginComponent implements OnInit {
         }
         else if (this.user[0] == "Customer") {
           console.log("Customer");
-          localStorage.removeItem("Seller_ID");
           localStorage.setItem("Customer_ID", this.user[1]);
+          localStorage.setItem("Login", "true");
           this.router.navigate(['HomePage/Product'])
         }
        
