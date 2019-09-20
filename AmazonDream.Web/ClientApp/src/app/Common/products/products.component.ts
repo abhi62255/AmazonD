@@ -21,12 +21,36 @@ export class ProductsComponent implements OnInit,OnDestroy {
 
 
 
+  removingDuplication() {
+    this.productList.forEach(product => {   //to remove similar product from One of the list
+      let index = 0;
+      console.log(product.id);
+      this.productListAll.forEach(productAll => {
+        console.log(productAll.id);
+        if (product.id == productAll.id) {
+          console.log("Remove");
+          console.log(productAll.id);
+          this.productListAll.splice(index, 1);
+          index += 1;
+          return true;
+
+        }
+      });
+    });
+  }
+
+
 
   productSuggestionKnown() {          //suggested product for known user
     this._productSuggestion.GetSuggestedProductsKnownUser()
       .subscribe((data: any[]) => {
         this.ProductListStable = data;
         this.productList = this.ProductListStable;
+
+        this.removingDuplication();
+        console.log(this.productListAll);
+        console.log(this.productList);
+
       });
 
     console.log(this.ProductListStable);
@@ -38,20 +62,22 @@ export class ProductsComponent implements OnInit,OnDestroy {
         this.ProductListStable = data;
         this.productList = this.ProductListStable;
 
+        this.removingDuplication();
+        
       });
 
     console.log(this.ProductListStable);
   }
 
 
-  productSuggestionAll() {      //suggested product for Unknown user
+  productSuggestionAll() {      //suggested product for All user
     this._productSuggestion.GetSuggestedProductsAll()
       .subscribe((data: any[]) => {
         this.ProductListAllStable = data;
         this.productListAll = this.ProductListAllStable;
 
-       
-
+        this.removingDuplication();
+        
       });
 
     console.log(this.productList);
@@ -66,13 +92,22 @@ export class ProductsComponent implements OnInit,OnDestroy {
 
 
   ngOnInit() {
+    this.productListAll = [];
+    this.productList = [];
+    this.ProductListStable = [];
+    this.ProductListAllStable = [];
+
+
     this.productSuggestionAll();
+
     if (localStorage.getItem("Customer_ID") == null) {
       this.productSuggestionUnKnown();
     }
     else {
       this.productSuggestionKnown();
     }
+
+
 
     console.log(this.productListAll);
     console.log(this.productList);
@@ -91,12 +126,20 @@ export class ProductsComponent implements OnInit,OnDestroy {
     this.subscriptions.push(
       this._notificationService.productAddedToCartNotification.subscribe((SearchTag: string) => {
         this.productList = this.ProductListStable;
-        if (SearchTag != '') {            //filtering of products
-          this.productListAll = null;
+        this.productListAll = this.ProductListAllStable;
+        SearchTag = SearchTag.toLocaleLowerCase();
+
+        if (SearchTag != '') {            //filtering of products productList
           this.productList = this.productList.filter(res => {
             return res.productName.toLocaleLowerCase().match(SearchTag.toLocaleLowerCase());
           });
-        } else if (SearchTag == '') {
+        }
+        if (SearchTag != '') {            //filtering of products in productListAll
+          this.productListAll = this.productListAll.filter(res => {
+            return res.productName.toLocaleLowerCase().match(SearchTag.toLocaleLowerCase());
+          });
+        }
+        else if (SearchTag == '') {
         
           this.productListAll = this.ProductListAllStable;
           this.productList = this.ProductListStable;
