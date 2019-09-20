@@ -15,7 +15,6 @@ export class ProductsComponent implements OnInit,OnDestroy {
 
   public productList: any[];
   public productListAll: any[];
-  public Name: string;
   public subscriptions: any[];
   public ProductListStable: any[];
   public ProductListAllStable: any[];
@@ -74,6 +73,9 @@ export class ProductsComponent implements OnInit,OnDestroy {
     else {
       this.productSuggestionKnown();
     }
+
+    console.log(this.productListAll);
+    console.log(this.productList);
 
     //for removing similar products
     //this.productListAll.forEach((obj) => {
