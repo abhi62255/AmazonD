@@ -39,6 +39,11 @@ namespace AmazonDream.DAL
             return db.ProductPicture.Where(p => p.Product_ID == id).ToList();
         }
 
+        public string GetSingleProductPicture(long id)              //get single product picture(use for thumb nail)
+        {
+            return db.ProductPicture.Where(p => p.Product_ID == id).Select(p=>p.PicturePath).FirstOrDefault();
+        }
+
 
         public List<Product> GetProductByProductStatus(string value)           //get all product which are Pending:Accepted:Deleted:all
         {

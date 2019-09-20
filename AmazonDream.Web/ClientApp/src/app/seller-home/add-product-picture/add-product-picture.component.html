@@ -1,7 +1,7 @@
 <p>add-product-picture works!</p>
 <form (ngSubmit)="addProductPicture(f)" #f=ngForm>
-  <input type="file" name="PicturePath" ngModel/>
+  <input type="file" name="PicturePath" ngModel required/>
   <input type="hidden" name="Product_ID" ngModel/>
-  <button type="submit" value="Add">Add</button>
+  <button type="submit" value="Add" [disabled]="!f.valid">Add</button>
 </form>
 <button routerLink="../../SellerHome" type="button" value="Finish">Finish</button>

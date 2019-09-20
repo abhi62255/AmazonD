@@ -51,6 +51,8 @@ export class ProductsComponent implements OnInit,OnDestroy {
         this.ProductListAllStable = data;
         this.productListAll = this.ProductListAllStable;
 
+       
+
       });
 
     console.log(this.productList);
@@ -73,19 +75,27 @@ export class ProductsComponent implements OnInit,OnDestroy {
       this.productSuggestionKnown();
     }
 
-    this.subscriptions = [];
+    //for removing similar products
+    //this.productListAll.forEach((obj) => {
+    //  var existNotification = this.productList.find(({ id }) => obj.id === id);
+    //  let index: number = this.productListAll.indexOf(obj.id);
+    //  if (existNotification) {
+    //    this.productListAll.splice(index, 1);
+    //  }
+    //});
+
+    this.subscriptions = [];      //Notification service
 
     this.subscriptions.push(
       this._notificationService.productAddedToCartNotification.subscribe((SearchTag: string) => {
         this.productList = this.ProductListStable;
-        if (SearchTag != '') {        //need to handel backspace problem
+        if (SearchTag != '') {            //filtering of products
           this.productListAll = null;
           this.productList = this.productList.filter(res => {
             return res.productName.toLocaleLowerCase().match(SearchTag.toLocaleLowerCase());
           });
         } else if (SearchTag == '') {
-          //this.productList = this.productList;
-          //this.ngOnInit();
+        
           this.productListAll = this.ProductListAllStable;
           this.productList = this.ProductListStable;
         }

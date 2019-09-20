@@ -61,8 +61,16 @@ namespace AmazonDream.BLL
             foreach(var product in products)
             {
                 var model = _mapper.Map<Product, ProductModel>(product);
+                model.PicturePath = _productDA.GetSingleProductPicture(product.ID);
                 productList.Add(model);
             }
+
+            var trendingProducts = GetSuggestedProductsUnknownUser();       //remove similar occurance of products
+            foreach(var product in trendingProducts)
+            {
+                productList.Remove(product);
+            }
+
 
             return productList;
         }
@@ -80,6 +88,8 @@ namespace AmazonDream.BLL
                     if(pro.ProductStatus == "Accepted")
                     {
                         var model = _mapper.Map<Product, ProductModel>(pro);
+                        //add picture
+                        model.PicturePath = _productDA.GetSingleProductPicture(pro.ID);
                         if (suggestedProductsList.FirstOrDefault(p => p.ID == model.ID) == null)
                             suggestedProductsList.Add(model);
                     }
@@ -97,6 +107,7 @@ namespace AmazonDream.BLL
             foreach(var product in SimilarProductList)
             {
                 var model = _mapper.Map<Product, ProductModel>(product);
+                model.PicturePath = _productDA.GetSingleProductPicture(product.ID);
                 productModelList.Add(model);
             }
             return productModelList;

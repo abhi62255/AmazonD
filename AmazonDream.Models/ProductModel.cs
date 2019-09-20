@@ -41,6 +41,9 @@ namespace AmazonDream.ViewModels
         [Required]
         public string ProductDescription { get; set; }
 
+        public string PicturePath { get; set; }                 //to get single picture of product ot show as thumb nail
+                                                                //added later may cause error (possible to remove later if cause error)
+                                                                
         public long Seller_ID { get; set; }
 
     }
