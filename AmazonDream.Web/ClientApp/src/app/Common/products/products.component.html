@@ -8,6 +8,7 @@
     <li data-target="#demo" data-slide-to="2"></li>
   </ul>
 
+
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -32,12 +33,13 @@
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
-
+<br />
 
 
 <!--Slider  -->
 
-<p>products works!</p>
+
+<!--<p>products works!</p>
 <li *ngFor="let product of productList">
   {{product | json}}
   <button (click)="productHome(product.id)">Details</button>
@@ -49,4 +51,53 @@
   {{product | json}}
   <button (click)="productHome(product.id)">Details</button>
 
-</li>
+</li>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="card-columns">
+  <div class="card" *ngFor="let product of productListAll" style="max-height:600px;max-width:350px;">
+    <button (click)="productHome(product.id)">
+      <img src="../../../assets/ProductPicture/{{product.picturePath}}" class="card-img-top" alt="..." style=" object-fit:contain; height:200px;width:200px;">
+      <div class="card-body">
+        <h5 class="card-title">{{product.productName}}</h5>
+        <p class="card-text"><small>{{product.productBrand}}</small></p>
+        <p class="card-text">Price : {{product.productPrice - (product.productPrice *  product.productDiscount) / 100 }}   <s> <small class="text-muted">{{product.productPrice}} </small></s> &nbsp; <span style="color:forestgreen;font:bold;"> {{product.productDiscount}}%  Saved : {{(product.productPrice *  product.productDiscount) / 100 }}</span></p>
+      </div>
+      <div class="card-footer">
+        <p class="card-text"><small class="text-muted">By {{product.sellerName}}</small></p>
+      </div>
+    </button>
+  </div>
+</div>
+
+<div class="card-columns">
+  <div class="card" *ngFor="let product of productList" style="max-height:600px;max-width:350px;">
+    <button (click)="productHome(product.id)">
+      <img src="../../../assets/ProductPicture/{{product.picturePath}}" class="card-img-top" alt="..." style=" object-fit:contain; height:200px;width:200px;">
+      <div class="card-body">
+        <h5 class="card-title">{{product.productName}}</h5>
+        <p class="card-text"><small>{{product.productBrand}}</small></p>
+        <p class="card-text">Price : {{product.productPrice - (product.productPrice *  product.productDiscount) / 100 }}   <s> <small class="text-muted">{{product.productPrice}} </small></s> &nbsp; <span style="color:forestgreen;font:bold;"> {{product.productDiscount}}%  Saved : {{(product.productPrice *  product.productDiscount) / 100 }}</span></p>
+      </div>
+      <div class="card-footer">
+        <p class="card-text"><small class="text-muted">By {{product.sellerName}}</small></p>
+      </div>
+    </button>
+  </div>
+</div>

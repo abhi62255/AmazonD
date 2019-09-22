@@ -107,7 +107,10 @@ namespace AmazonDream.BLL
             var productByID = _productDA.GetProduct(id);
             var SimilarProductList = _productDA.GetProductsBYSubCategory(productByID.ProductSubCategory);
 
-            foreach(var product in SimilarProductList)
+            SimilarProductList.Remove(productByID);         //remove product which is already in main page.
+                                                                //Above logic will also include the same product.
+
+            foreach (var product in SimilarProductList)
             {
                 var model = _mapper.Map<Product, ProductModel>(product);
                 model.PicturePath = _productDA.GetSingleProductPicture(product.ID);
