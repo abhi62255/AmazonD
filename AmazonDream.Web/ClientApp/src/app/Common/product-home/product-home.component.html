@@ -1,25 +1,57 @@
-<p>product-home works!</p>
-<li *ngIf="product">
+<br />
+<div class="row no-gutters" style="text-align:left;">
+  <div class="col-md-4">
 
-  {{product |json}}
-  <button (click)="addProductToKart(product.id)">Add To Kart</button>
-  <button (click)="addWish(product.id)">Add To Wish</button>
-</li>
+    <hr style="background-color:black" />
+    <div class="row">
+      <div *ngFor="let image of productPicture" class="slide">
+        <img src="../../../assets/ProductPicture/{{image}}" style="object-fit:contain;height:300px;width:300px;">
+      </div>
+    </div>
+    <hr style="background-color:black" />
 
-<li *ngFor="let pic of productPicture">
-  <img src="../../../assets/ProductPicture/{{pic}}" alt="Image could not load" height="300" width="300" />
-</li>
 
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link" routerLink="Reviews">Reviews</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" routerLink="SimilarProducts" >Related Products</a>
-  </li>
-</ul>
-<router-outlet></router-outlet>
-<!--<button (click)="deleteProduct(product.id)">Delete</button>
-<button (click)="trendRequest(product.id)">Trend Request</button>
-<button (click)="constProductID(product.id)">Update values</button>-->
+    <div class="btn-group btn-group-md">
+      <button (click)="addProductToKart(product.id)" class=" btn btn-success">Add To Kart</button>
+      <button (click)="addWish(product.id)" class=" btn btn-primary">Add To Wish</button>
+    </div>
+    <hr />
+  </div>
+
+
+
+  <div class="col-md-8" *ngIf="product">
+    <div class="card-body">
+      <h5 class="card-title">{{product.productName}}</h5>
+      <p class="card-text"><small>{{product.productBrand}}</small></p>
+      <p class="card-text">Price : {{product.productPrice - (product.productPrice *  product.productDiscount) / 100 }}   <s> <small class="text-muted">{{product.productPrice}} </small></s> &nbsp; <span style="color:forestgreen;font:bold;"> {{product.productDiscount}}%  Saved : {{(product.productPrice *  product.productDiscount) / 100 }}</span></p>
+      <p class="card-text"><small class="text-muted">By {{product.sellerName}}</small></p>
+      <li *ngFor="let des of Descrption">
+        {{des}}
+      </li>
+    </div>
+  </div>
+
+
+  
+
+    <!--<li *ngFor="let pic of productPicture">
+      <img src="../../../assets/ProductPicture/{{pic}}" alt="Image could not load" height="300" width="300" />
+    </li>-->
+</div>
+
+
+
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="Reviews">Reviews</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="SimilarProducts">Related Products</a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
+  <!--<button (click)="deleteProduct(product.id)">Delete</button>
+  <button (click)="trendRequest(product.id)">Trend Request</button>
+  <button (click)="constProductID(product.id)">Update values</button>-->
 

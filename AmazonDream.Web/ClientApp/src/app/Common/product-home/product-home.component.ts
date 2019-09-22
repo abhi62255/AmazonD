@@ -21,11 +21,16 @@ export class ProductHomeComponent implements OnInit {
   public productPicture: any;
   public result: string;
   public wish = new Wish();
+  public Descrption;
+
 
   getProductDetails() {
     this._previsit.addPrevisit().subscribe();
     this._product.getProductDetails()
-      .subscribe((data: any) => this.product = data);
+      .subscribe((data: any) => {
+        this.product = data
+        this.Descrption = data.productDescription.split(",");
+      });
     console.log(this.product);
   }
   getProductPicture() {

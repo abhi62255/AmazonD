@@ -1,12 +1,27 @@
 <p>address works!</p>
-<li *ngFor="let address of addressList">
-  {{address | json}}
-  <button (click)="deleteAddress(address.id)">Remove</button>
-  <button (click)="selectAddress(address.id)">Select</button>
 
-</li>
+<div class="card border-info mb-3" style="max-width: 1500px;" *ngFor="let address of addressList">
+  <div class="card-header">{{address.addressType}}</div>
+  <div class="card-body text-info">
+    <p class="card-text">
+      <li>
+        Address Line : <span style="color:black;">{{address.addressLine}} </span>
+        State : <span style="color:black;">{{address.state}}</span>
+        City : <span style="color:black;">{{address.city}}</span>
+        Postal Code : <span style="color:black;">{{address.postalCode}}</span>
+      </li>
+      <button (click)="selectAddress(address.id)" class=" btn btn-primary">Select</button>
+      <button (click)="deleteAddress(address.id)" class=" btn btn-danger">Remove</button>
+    </p>
+  </div>
+</div>
 
-<button (click)="addAddress()">Add Address</button>
+
+
+
+
+
+<button (click)="addAddress()" class=" btn btn-success">Add Address</button>
 
 <router-outlet></router-outlet>
 

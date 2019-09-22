@@ -137,7 +137,8 @@ namespace AmazonDream.BLL
                 model.DateTime = kartItem.DateTime;
                 model.Product_ID = product.ID;
                 model.ID = kartItem.ID;
-                model.Amount = (model.ProductPrice - (model.ProductPrice / model.ProductDiscount))*model.Quantity;  //Calculating amout for product
+                model.PicturePath = _productDA.GetSingleProductPicture(product.ID);
+                model.Amount = (model.ProductPrice - (model.ProductPrice * model.ProductDiscount)/100)*model.Quantity;  //Calculating amout for product
 
                 _productAndKartList.Add(model);
 

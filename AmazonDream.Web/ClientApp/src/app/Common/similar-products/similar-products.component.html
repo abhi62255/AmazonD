@@ -8,7 +8,7 @@
         <div class="card-body">
           <h5 class="card-title">{{product.productName}}</h5>
           <p class="card-text"><small>{{product.productBrand}}</small></p>
-          <p class="card-text">Price : {{product.productPrice - (product.productPrice *  product.productDiscount) / 100 }}   <s> <small class="text-muted">{{product.productPrice}} </small></s> &nbsp; <span style="color:forestgreen;font:bold;"> {{product.productDiscount}}% </span></p>
+          <p class="card-text">Price : {{product.productPrice - (product.productPrice *  product.productDiscount) / 100 }}   <s> <small class="text-muted">{{product.productPrice}} </small></s> &nbsp; <span style="color:forestgreen;font:bold;"> {{product.productDiscount}}%  Saved : {{(product.productPrice *  product.productDiscount) / 100 }}</span></p>
           <p class="card-text"><small class="text-muted">By {{product.sellerName}}</small></p>
         </div>
       </div>

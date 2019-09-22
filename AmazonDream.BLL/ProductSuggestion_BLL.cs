@@ -89,6 +89,8 @@ namespace AmazonDream.BLL
                     if(pro.ProductStatus == "Accepted")
                     {
                         var model = _mapper.Map<Product, ProductModel>(pro);
+                        var seller = _sellerDA.GetSellerByID(model.Seller_ID);
+                        model.SellerName = seller.Name;
                         //add picture
                         model.PicturePath = _productDA.GetSingleProductPicture(pro.ID);
                         if (suggestedProductsList.FirstOrDefault(p => p.ID == model.ID) == null)
@@ -122,7 +124,12 @@ namespace AmazonDream.BLL
         public ProductModel GetProduct(long id)                 //get Product
         {
             var entity = _productDA.GetProduct(id);
-            return _mapper.Map<Product, ProductModel>(entity);
+            var model = _mapper.Map<Product, ProductModel>(entity);
+
+            var seller = _sellerDA.GetSellerByID(entity.Seller_ID);
+            model.SellerName = seller.Name;
+
+            return model;
         }
 
         public List<string> GetProductPicture(long id)          //get ProductPicture

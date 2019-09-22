@@ -49,6 +49,7 @@ import { RefreshComponentComponent } from './Common/refresh-component/refresh-co
 import { RouterModule } from '@angular/router';
 import { NotificationService } from './Services/notification.service';
 import { OrderHistoryComponent } from './Common/order-history/order-history.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 
 @NgModule({
@@ -97,7 +98,8 @@ import { OrderHistoryComponent } from './Common/order-history/order-history.comp
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    RouterModule
+    RouterModule,
+    SlickCarouselModule
   ],
   providers: [ConstantsService,
     ProductService,

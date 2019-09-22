@@ -22,6 +22,8 @@ namespace AmazonDream.ViewModels
 
         public long Amount { get; set; }
 
+        public string PicturePath { get; set; }
+
 
 
     }

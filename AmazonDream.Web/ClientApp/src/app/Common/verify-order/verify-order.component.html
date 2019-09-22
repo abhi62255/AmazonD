@@ -1,4 +1,7 @@
-<p>verify-order works!</p>
-{{PaymentMode}}
-{{Address}}
-<button (click)="placeOrder()">Place Order</button>
+<h4>Verify Order</h4>
+
+<div class="container">
+  <h6>Payment Mode : </h6> {{PaymentMode}}<br />
+  <h6>Address : </h6>{{Address}}<br />
+  <button (click)="placeOrder()" class=" btn btn-success">Place Order</button>
+</div>

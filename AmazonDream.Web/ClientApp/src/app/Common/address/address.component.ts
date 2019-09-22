@@ -27,7 +27,7 @@ export class AddressComponent implements OnInit {
   selectAddress(id: number) {
     localStorage.setItem("Address_ID", <string><any>id);
 
-    this.toastr.success("Address Selected");
+    this.toastr.info("Address Selected");
     this.router.navigate(['HomePage/Kart/PaymentMode']);
   }
 
