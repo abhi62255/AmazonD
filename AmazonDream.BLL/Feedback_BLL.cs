@@ -16,6 +16,7 @@ namespace AmazonDream.BLL
             _mapper = mapper;
         }
         FeedbackDA _feedbackDA = new FeedbackDA();
+        CustomerDA _customerDA = new CustomerDA();
 
         public Boolean AddFeedback(FeedbackModel model)             //Add review to Product
         {
@@ -46,6 +47,10 @@ namespace AmazonDream.BLL
             foreach(var feed in entity)
             {
                 var model = _mapper.Map<Feedback, FeedbackModel>(feed);
+                var customer = _customerDA.CustomerDetails(model.Customer_ID);
+
+                model.CustomerName = customer.Name;
+
                 feedbacks.Add(model);
 
             }

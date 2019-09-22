@@ -1,6 +1,7 @@
 ﻿using AmazonDream.Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AmazonDream.DAL
@@ -15,6 +16,13 @@ namespace AmazonDream.DAL
             db.Customer.Add(model);
             db.SaveChanges();
             return true;
+        }
+
+        public Customer CustomerDetails(long id)                //get customer details
+        {
+            var customer = db.Customer.Where(c => c.ID == id).FirstOrDefault();
+            return customer;
+
         }
 
     }

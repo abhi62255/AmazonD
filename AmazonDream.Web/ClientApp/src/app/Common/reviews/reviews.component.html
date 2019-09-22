@@ -1,17 +1,19 @@
 <p>reviews works!</p>
 
 <form (ngSubmit)="addReview(f)" #f=ngForm>
-  <input type="number" name="Rating" placeholder="Rating" ngModel />
-  <input type="text" name="Review" placeholder="Review" ngModel />
+  <input type="number" name="Rating" placeholder="Rating" ngModel required/>
+  <input type="text" name="Review" placeholder="Review" ngModel required/>
   <input type="hidden" name="Customer_ID" ngModel />
   <input type="hidden" name="Product_ID" ngModel />
 
-  <button type="submit" value="Add">Add Review</button>
+  <button type="submit" value="Add" [disabled]="!f.valid">Add Review</button>
 </form>
 
-<li *ngFor="let review of reviewList">
-  {{review | json}}
-  <!--<button (click)="productHome(product.id)">Details</button>-->
 
-
-</li>
+<div class="card border-info mb-3" style="max-width: 1500px;" *ngFor="let review of reviewList">
+  <div class="card-header">{{review.customerName}}</div>
+  <div class="card-body text-info">
+    <h5 class="card-title">{{review.rating}}</h5>
+    <p class="card-text"><li>{{review.review}}</li></p>
+  </div>
+</div>

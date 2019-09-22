@@ -18,5 +18,6 @@ namespace AmazonDream.ViewModels
         public string Review { get; set; }
         public long Product_ID { get; set; }
         public int Customer_ID { get; set; }
+        public string CustomerName { get; set; }
     }
 }

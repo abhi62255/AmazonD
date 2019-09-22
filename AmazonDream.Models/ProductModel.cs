@@ -45,6 +45,7 @@ namespace AmazonDream.ViewModels
                                                                 //added later may cause error (possible to remove later if cause error)
                                                                 
         public long Seller_ID { get; set; }
+        public string SellerName { get; set; }
 
     }
 }

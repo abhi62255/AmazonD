@@ -18,9 +18,7 @@ namespace AmazonDream.BLL
             if(user != null)
             {
 
-                byte[] time = BitConverter.GetBytes(DateTime.UtcNow.ToBinary());
-                byte[] key = Guid.NewGuid().ToByteArray();
-                string token = Convert.ToBase64String(time.Concat(key).ToArray());
+                
             }
             return user;
         }

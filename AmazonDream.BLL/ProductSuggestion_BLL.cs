@@ -18,6 +18,7 @@ namespace AmazonDream.BLL
         PreVisitDA _preVisitDA = new PreVisitDA();
         ProductDA _productDA = new ProductDA();
         WishlistDA _wishlistDA = new WishlistDA();
+        SellerDA _sellerDA = new SellerDA();
 
         List<ProductModel> suggestedProductsList = new List<ProductModel>();
 
@@ -108,6 +109,8 @@ namespace AmazonDream.BLL
             {
                 var model = _mapper.Map<Product, ProductModel>(product);
                 model.PicturePath = _productDA.GetSingleProductPicture(product.ID);
+                var seller = _sellerDA.GetSellerByID(model.Seller_ID);
+                model.SellerName = seller.Name;
                 productModelList.Add(model);
             }
             return productModelList;
