@@ -58,7 +58,10 @@ namespace AmazonDream.BLL
             var entity = obj.GetProductsAll(id);
             foreach (var i in entity)
             {
-                model.Add(_mapper.Map<Product, ProductModel>(i));
+                var picture = obj.GetSingleProductPicture(i.ID);
+                var modelP = _mapper.Map<Product, ProductModel>(i);
+                modelP.PicturePath = picture;
+                model.Add(modelP);
             }
 
             return (model);
@@ -72,7 +75,10 @@ namespace AmazonDream.BLL
             var entity = obj.GetProductsPending(id);
             foreach (var i in entity)
             {
-                model.Add(_mapper.Map<Product, ProductModel>(i));
+                var picture = obj.GetSingleProductPicture(i.ID);
+                var modelP = _mapper.Map<Product, ProductModel>(i);
+                modelP.PicturePath = picture;
+                model.Add(modelP);
             }
 
             return (model);
@@ -86,7 +92,10 @@ namespace AmazonDream.BLL
             var entity = obj.GetProductsActive(id);
             foreach (var i in entity)
             {
-                model.Add(_mapper.Map<Product, ProductModel>(i));
+                var picture = obj.GetSingleProductPicture(i.ID);
+                var modelP = _mapper.Map<Product, ProductModel>(i);
+                modelP.PicturePath = picture;
+                model.Add(modelP);
             }
 
             return (model);
@@ -97,7 +106,10 @@ namespace AmazonDream.BLL
             var entity = obj.GetProductsTrending(value,id);
             foreach (var i in entity)
             {
-                model.Add(_mapper.Map<Product, ProductModel>(i));
+                var picture = obj.GetSingleProductPicture(i.ID);
+                var modelP = _mapper.Map<Product, ProductModel>(i);
+                modelP.PicturePath = picture;
+                model.Add(modelP);
             }
 
             return (model);
@@ -142,7 +154,12 @@ namespace AmazonDream.BLL
 
         public Boolean ProductTrendRequest(string value,long id)           //product trend request
         {
+
             var model = obj.GetProduct(id);
+            if(model.ProductTrend == "True" && value == "Requested")
+            {
+                return true;
+            }
             if (model != null)
             {
                 model.ProductTrend = value;

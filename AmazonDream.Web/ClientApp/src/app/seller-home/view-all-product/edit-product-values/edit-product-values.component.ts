@@ -18,7 +18,7 @@ export class EditProductValuesComponent implements OnInit {
     this.productServices.updateValues(nf.value).subscribe(
       responseData => {
         console.log(responseData)
-        this.router.navigateByUrl('', { skipLocationChange: true }).then(() =>
+        this.router.navigateByUrl('HomePage/RefreshComponent', { skipLocationChange: true }).then(() =>
           this.router.navigate(["SellerHome/ViewProduct"])); 
       }
     );

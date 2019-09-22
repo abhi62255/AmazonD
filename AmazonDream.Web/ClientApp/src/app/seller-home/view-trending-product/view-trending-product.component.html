@@ -1,6 +1,20 @@
-<p>view-trending-product works!</p>
-<li *ngFor="let product of productList">
-  {{product | json}}
-  <button (click)="removeTrendingProduct(product.id)">Remove Trending</button>
+<p *ngIf="!productList">No recordes to show</p>
 
-</li>
+<div class="card mb-3" style="max-width: 1540px;" *ngFor="let product of productList">
+  <div class="row no-gutters" style="text-align:left">
+    <div class="col-md-4">
+      <img src="../../../assets/ProductPicture/{{product.picturePath}}" class="card-img" style="object-fit:contain; height:200px;width:200px;" alt="Image could not be loaded">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{product.productName}}</h5>
+        <p class="card-text"><small>{{product.productBrand}}</small></p>
+        <p class="card-text">Price : {{product.productPrice - (product.productPrice *  product.productDiscount) / 100 }}   <s> <small class="text-muted">{{product.productPrice}} </small></s> &nbsp; <span style="color:forestgreen;font:bold;"> {{product.productDiscount}}%  Saved : {{(product.productPrice *  product.productDiscount) / 100 }}</span></p>
+        <button (click)="removeTrendingProduct(product.id)" class=" btn btn-danger">Remove Trending</button>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<br />
+

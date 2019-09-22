@@ -36,7 +36,7 @@ namespace AmazonDream.DAL
 
         public List<PlacedOrder> OrderRecived(long id)              //By seller ID
         {
-            return db.PlacedOrder.Where(o => o.Product.Seller_ID == id).ToList();
+            return db.PlacedOrder.Where(o => o.Product.Seller_ID == id).OrderByDescending(o => o.OrderNumber).ToList();
         }
 
         public Boolean UpdateStatus(string status,long id)           //Update Order Status
@@ -50,12 +50,12 @@ namespace AmazonDream.DAL
 
         public List<PlacedOrder> OrderRecived()              //Order Recived (for admin)
         {
-            return db.PlacedOrder.ToList();
+            return db.PlacedOrder.OrderByDescending(o => o.OrderNumber).ToList();
         }
 
         public List<PlacedOrder> OrderPlaced(long id)              //Order Placed (for Customer)
         {
-            return db.PlacedOrder.Where(o => o.Customer_ID == id).ToList();
+            return db.PlacedOrder.Where(o => o.Customer_ID == id).OrderByDescending(o=>o.OrderNumber).ToList();
         }
 
     }

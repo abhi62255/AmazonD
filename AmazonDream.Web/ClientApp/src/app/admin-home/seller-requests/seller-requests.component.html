@@ -1,8 +1,18 @@
-<p>seller-requests works!</p>
-<li *ngFor="let seller of sellerList">
-  {{seller | json}}
 
-  <button (click)="respondSellerRequest('Accepted',seller.id)">Accept</button>
-  <button (click)="respondSellerRequest('Deleted',seller.id)">Delete</button>
 
-</li>
+<div class="card mb-3" style="max-width: 1540px;" *ngFor="let seller of sellerList">
+  <div class="row no-gutters" style="text-align:left">
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{seller.name}}</h5>
+        <p class="card-text">{{seller.email}}</p>
+        <button (click)="respondSellerRequest('Accepted',seller.id)" type="submit" class=" btn btn-success">Accept</button>
+        <button (click)="respondSellerRequest('Deleted',seller.id)" type="submit" class=" btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<br />
+
+

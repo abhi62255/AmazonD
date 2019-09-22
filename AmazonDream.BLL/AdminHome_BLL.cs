@@ -30,7 +30,12 @@ namespace AmazonDream.BLL
 
             foreach (var i in entity)
             {
-                model.Add(_mapper.Map<Product, ProductModel>(i));
+                var picture = _productDA.GetSingleProductPicture(i.ID);
+                var modelP = _mapper.Map<Product, ProductModel>(i);
+                modelP.PicturePath = picture;
+                var seller = _sellerDA.GetSellerByID(modelP.Seller_ID);
+                modelP.SellerName = seller.Name;
+                model.Add(modelP);
             }
 
             return (model);
@@ -94,7 +99,12 @@ namespace AmazonDream.BLL
 
             foreach (var i in entity)
             {
-                model.Add(_mapper.Map<Product, ProductModel>(i));
+                var picture = _productDA.GetSingleProductPicture(i.ID);
+                var modelP = _mapper.Map<Product, ProductModel>(i);
+                modelP.PicturePath = picture;
+                var seller = _sellerDA.GetSellerByID(modelP.Seller_ID);
+                modelP.SellerName = seller.Name;
+                model.Add(modelP);
             }
 
             return model;
@@ -107,7 +117,12 @@ namespace AmazonDream.BLL
 
             foreach (var i in entity)
             {
-                model.Add(_mapper.Map<Product, ProductModel>(i));
+                var picture = _productDA.GetSingleProductPicture(i.ID);
+                var modelP = _mapper.Map<Product, ProductModel>(i);
+                modelP.PicturePath = picture;
+                var seller = _sellerDA.GetSellerByID(modelP.Seller_ID);
+                modelP.SellerName = seller.Name;
+                model.Add(modelP);
             }
 
             return model;

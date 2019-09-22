@@ -1,8 +1,24 @@
-<p>orders works!</p>
-<li *ngFor="let order of orderList">
-  {{order | json}}
-  <!--<form (ngSubmit)="updateStatus(f,order.id)" #f=ngForm>
-    <input type="text" name="status" placeholder="ProductStatus" ngModel />
-    <button type="submit" value="Update">Update Status</button>
-  </form>-->
-</li>
+
+
+<div class="card mb-3" style="max-width: 1540px;" *ngFor="let order of orderList">
+  <div class="row no-gutters" style="text-align:left">
+    <div class="col-md-12">
+      <div class="card-body">
+        <h5 class="card-title">{{order.productName}}</h5>
+        <p class="card-text"><small>Order No. : {{order.orderNumber}}</small></p>
+        <p class="card-text">Amount : {{order.amount }} </p>
+        <p class="card-text">Date - Time : {{order.dateTime }} </p>
+        <p class="card-text">Address : {{order.address }} </p>
+        <p class="card-text">Payment Mode : {{order.paymentType }} </p>
+        <p class="card-text">Order Status : {{order.status}} </p>
+        <p class="card-text">Seller : {{order.sellerName}} </p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<br />
+
+
