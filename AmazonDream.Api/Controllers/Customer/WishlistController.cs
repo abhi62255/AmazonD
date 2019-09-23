@@ -12,6 +12,7 @@ namespace AmazonDream.Api.Controllers.Customer
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Customer")]
     public class WishlistController : ControllerBase
     {
 

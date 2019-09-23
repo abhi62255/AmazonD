@@ -45,7 +45,7 @@ namespace AmazonDream.DAL
                 {
                     return "SellerPending";
                 }
-                else if (seller.Status == "deleted")
+                else if (seller.Status == "Deleted")
                 {
                     return "SellerDeleted";
                 }

@@ -8,7 +8,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Runtime.Serialization.Json;
-
+using Microsoft.AspNetCore.Authorization;
 
 namespace AmazonDream.Api.Controllers.Seller
 {
@@ -26,6 +26,7 @@ namespace AmazonDream.Api.Controllers.Seller
 
         // POST: api/SellerProduct/product
         [HttpPost("product")]
+        [Authorize(Roles = "Seller")]
         public long PostProduct([FromBody] ProductModel model)        //add product
         {
             return (obj.AddProduct(model));   
@@ -34,6 +35,7 @@ namespace AmazonDream.Api.Controllers.Seller
 
         // POST: api/SellerProduct/productPicture
         [HttpPost("productPicture")]
+        [Authorize(Roles = "Seller")]
         public IActionResult PostProductPicture([FromBody] ProductPictureModel model)        //add product Picture
         {
             if (!ModelState.IsValid)
@@ -50,6 +52,7 @@ namespace AmazonDream.Api.Controllers.Seller
 
         // GET: api/SellerProduct/1
         [HttpGet("{id}")]
+        [Authorize(Roles = "Seller")]
         public ProductModel GetProduct(long id)       //Get Product by ProductID
         {
             return obj.GetProduct(id);
@@ -57,6 +60,7 @@ namespace AmazonDream.Api.Controllers.Seller
 
         // GET: api/SellerProduct/all/1
         [HttpGet("all/{id}")]
+        [Authorize(Roles = "Seller")]
         public List<ProductModel> GetProductsAll(long id)       //Get product by sellerID
         { 
             return obj.GetProductsAll(id);
@@ -64,6 +68,7 @@ namespace AmazonDream.Api.Controllers.Seller
 
         // GET: api/SellerProduct/pending/1
         [HttpGet("Pending/{id}")]
+        [Authorize(Roles = "Seller")]
         public List<ProductModel> GetProductsPending(long id)       //Get product by sellerID
         {
             return obj.GetProductsPending(id);
@@ -71,6 +76,7 @@ namespace AmazonDream.Api.Controllers.Seller
 
         // GET: api/SellerProduct/accepted/1
         [HttpGet("Accepted/{id}")]
+        [Authorize(Roles = "Seller")]
         public List<ProductModel> GetProductsActive(long id)       //Get product by sellerID
         {
             return obj.GetProductsActive(id);
@@ -78,6 +84,7 @@ namespace AmazonDream.Api.Controllers.Seller
 
         // GET: api/SellerProduct/trending/True:False:Requested/1
         [HttpGet("Trending/{value}/{id}")]
+        [Authorize(Roles = "Seller")]
         public List<ProductModel> GetProductsTrending(string value, long id)       //Get Trending product by sellerID
         {
             return obj.GetProductsTrending(value,id);
@@ -86,6 +93,7 @@ namespace AmazonDream.Api.Controllers.Seller
 
 
         [HttpPut("update")]
+        [Authorize(Roles = "Seller")]
         public IActionResult UpdateProduct(ProductModel model)          //update whole product 
         {
             if (!ModelState.IsValid)
@@ -100,6 +108,7 @@ namespace AmazonDream.Api.Controllers.Seller
         }
 
         [HttpPut("updateValues")]
+        [Authorize(Roles = "Seller")]
         public IActionResult UpdateProductValues(ProductValuesModel model)      //update product values
         {
             if (!ModelState.IsValid)
@@ -115,6 +124,7 @@ namespace AmazonDream.Api.Controllers.Seller
 
 
         [HttpPut("trendRequest/{value}/{id}")]
+        [Authorize(Roles = "Seller")]
         public IActionResult ProductTrendRequest(string value,long id)      //Request product for trend 
         {
             if (!ModelState.IsValid)
@@ -131,6 +141,7 @@ namespace AmazonDream.Api.Controllers.Seller
 
         // PATCH: api/SellerProduct/delete/1
         [HttpDelete("delete/{id}")]
+        [Authorize(Roles = "Seller")]
         public IActionResult DeleteProduct(long id)             //soft delete product 
         {
             if (obj.DeleteProduct(id))

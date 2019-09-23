@@ -24,8 +24,9 @@ export class LoginComponent implements OnInit {
           this.user = this.user.split(",");       //Seperating user and ID from response
           console.log(this.user[0] + ' ' + this.user[1]);
         }
-      
-        
+
+        console.log(this.user[2]);
+        localStorage.setItem("Token", this.user[2]);
         localStorage.removeItem("Seller_ID");
         localStorage.removeItem("Customer_ID");
         if (this.user == null) {
@@ -36,6 +37,7 @@ export class LoginComponent implements OnInit {
         else if (this.user[0] == "Admin") {
           console.log("Admin");
           localStorage.setItem("Login", "true");
+          localStorage.setItem("Admin", "true");
           this.router.navigate(['AdminHome'])
         }
         else if (this.user[0] == "Seller") {
@@ -46,9 +48,13 @@ export class LoginComponent implements OnInit {
         }
         else if (this.user[0] == "SellerPending") {
           console.log("SellerPending");
+          this.toastr.error("Your request is still pending With us.");
+
         }
         else if (this.user[0] == "SellerDeleted") {
           console.log("SellerDeleted");
+          this.toastr.error("You are Restricted from Using out services");
+
         }
         else if (this.user[0] == "Customer") {
           console.log("Customer");

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AmazonDream.BLL;
 using AmazonDream.ViewModels;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,6 +13,7 @@ namespace AmazonDream.Api.Controllers.Customer
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Customer")]
     public class PrevisitController : ControllerBase
     {
         private readonly Previsit_BLL obj;

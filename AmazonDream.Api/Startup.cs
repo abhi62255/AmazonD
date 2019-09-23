@@ -39,13 +39,29 @@ namespace AmazonDream.Api
             services.AddSingleton(mapper);
 
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                   .AddJwtBearer(options =>
+                   {
+                       options.TokenValidationParameters = new TokenValidationParameters
+                       {
+                           ValidateIssuer = true,
+                           ValidateAudience = true,
+                           ValidateLifetime = true,
+                           ValidateIssuerSigningKey = true,
+                           ValidIssuer = Configuration["Jwt:Issuer"],
+                           ValidAudience = Configuration["Jwt:Issuer"],
+                           IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
+                       };
+                   });
+
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddDbContext<AmazonDreamDbContext>(Options => Options.UseSqlServer(Configuration.GetConnectionString("MyConnString")));
 
-            var connection = @"Server=XIPL9378\SQLEXPRESS;Database=AmazonDreamDatabase;Trusted_Connection=True;";
-            services.AddDbContext<AmazonDreamDbContext>(options => options.UseSqlServer(connection));
 
+
+            
             //services.AddCors();
             services.AddCors(options =>
             {
@@ -65,21 +81,10 @@ namespace AmazonDream.Api
             {
                 app.UseHsts();
             }
-
-
-
-
-
-            app.UseCors(builder => builder.WithOrigins("http://localhost:4200")
-            .AllowAnyOrigin()
-            .AllowAnyMethod()
-            .AllowAnyHeader()
-            .AllowCredentials());
-
+            app.UseCors(builder => builder.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod());
+            app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseMvc();
-
-
         }
     }
 }

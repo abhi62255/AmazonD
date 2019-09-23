@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AmazonDream.BLL;
 using AmazonDream.ViewModels;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -32,6 +33,7 @@ namespace AmazonDream.Api.Controllers.Customer
 
         // POST: api/Feedback
         [HttpPost]
+        [Authorize(Roles = "Customer")]
         public IActionResult Post([FromBody] FeedbackModel model)             //Add review to Product
         {
             if(obj.AddFeedback(model))

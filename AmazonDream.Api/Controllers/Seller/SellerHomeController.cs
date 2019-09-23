@@ -8,6 +8,7 @@ using AmazonDream.Entities;
 using AmazonDream.Models;
 using AmazonDream.ViewModels;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -46,11 +47,13 @@ namespace AmazonDream.Api.Controllers
 
         // GET: api/sellerhome/placedorder/1
         [HttpGet("placedorder/{id}")]
+        [Authorize(Roles = "Seller")]
         public List<RecivedOrderModel> GetPlacedOrder(long id)
         {
             return _sellerHome_BLL.OrderRecived(id);
         }
 
+        [Authorize(Roles = "Seller")]
         [HttpPost("updateStatus/{status}/{id}")]
         public Boolean UpdateStatus(string status,long id)
         {

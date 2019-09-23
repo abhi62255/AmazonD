@@ -12663,11 +12663,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.Api\\AmazonDream.Api.csproj",
+      "projectUniqueName": "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.Api\\AmazonDream.Api.csproj",
       "projectName": "AmazonDream.Api",
-      "projectPath": "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.Api\\AmazonDream.Api.csproj",
+      "projectPath": "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.Api\\AmazonDream.Api.csproj",
       "packagesPath": "C:\\Users\\asharma1\\.nuget\\packages\\",
-      "outputPath": "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.Api\\obj\\",
+      "outputPath": "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12686,11 +12686,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.BLL\\AmazonDream.BLL.csproj": {
-              "projectPath": "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.BLL\\AmazonDream.BLL.csproj"
+            "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.BLL\\AmazonDream.BLL.csproj": {
+              "projectPath": "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.BLL\\AmazonDream.BLL.csproj"
             },
-            "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.Entities\\AmazonDream.Entities.csproj": {
-              "projectPath": "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.Entities\\AmazonDream.Entities.csproj"
+            "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.Entities\\AmazonDream.Entities.csproj": {
+              "projectPath": "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.Entities\\AmazonDream.Entities.csproj"
             }
           }
         }

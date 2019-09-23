@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ConstantsService } from './constants.service';
 import { Observable } from 'rxjs';
 
@@ -10,11 +10,15 @@ export class ProductSuggestionsService {
 
   constructor(private http: HttpClient, private _constant: ConstantsService) { }
 
+  token = localStorage.getItem("Token");
+  headers = {
+    headers: new HttpHeaders().set('Authorization', "Bearer " + this.token)
+  };
 
 
   GetSuggestedProductsKnownUser(): Observable<any> {
     console.log("Known user");
-    return this.http.get(this._constant.baseUrl + 'ProductSuggestions/' + localStorage.getItem("Customer_ID"));    //give product suggestion for customer
+    return this.http.get(this._constant.baseUrl + 'ProductSuggestions/' + localStorage.getItem("Customer_ID"), { headers: this.headers.headers });    //give product suggestion for customer
   }
 
   GetSuggestedProductsUnknownUser(): Observable<any> {

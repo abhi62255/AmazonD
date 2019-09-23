@@ -1,29 +1,86 @@
-<p>add-product!</p>
+<h5 style="align-content:center;">Add Product</h5>
 
 <form (ngSubmit)="addProduct(f)" #f=ngForm>
-  <input type="text" name="ProductName" placeholder="Product Name" ngModel required />
-  <input type="number" name="ProductPrice" placeholder="Product Price" ngModel required />
-  <input type="number" name="ProductQuantity" placeholder="Product Quantity" ngModel required />
-  <input type="number" name="ProductDiscount" placeholder="Product Discount" ngModel required />
-  <input type="text" name="ProductCategory" placeholder="Product Category" ngModel required />
-  <input type="text" name="ProductSubCategory" placeholder="Product Sub-Category" ngModel required />
-  <input type="text" name="ProductBrand" placeholder="Product Brand" ngModel required />
-    <input type="radio" name="ProductGenderType" value="Male"  ngModel checked> Male
-    <input type="radio" name="ProductGenderType" value="Female" ngModel> Female
-    <input type="radio" name="ProductGenderType" value="Neutral" ngModel> Neutral
+  <div class="form-group col-md-12">
+    <label>Product Name</label>
+    <input class="form-control" type="text" name="ProductName" placeholder="Product Name" autocomplete="off" ngModel required />
+  </div>
+  <div class="form-group form-row col-md-12">
+    <div class="form-group col-md-4">
+      <label>Price</label>
+      <input class="form-control" type="number" name="ProductPrice" placeholder="Product Price" autocomplete="off" ngModel required />
+    </div>
+    <div class="form-group col-md-4">
+      <label>Quantity</label>
+      <input class="form-control" type="number" name="ProductQuantity" placeholder="Product Quantity" autocomplete="off" ngModel required />
+    </div>
+    <div class="form-group col-md-4">
+      <label>Discount</label>
+      <input class="form-control" type="number" name="ProductDiscount" placeholder="Product Discount" autocomplete="off" ngModel required />
+    </div>
+  </div>
+  <div class="form-group form-row col-md-12">
+    <div class="form-group col-md-6">
+      <label>Category</label>
+      <input class="form-control" type="text" name="ProductCategory" placeholder="Product Category" autocomplete="off" ngModel required />
+    </div>
+    <div class="form-group col-md-6">
+      <label>Sub-Category</label>
+      <input class="form-control" type="text" name="ProductSubCategory" placeholder="Product Sub-Category" autocomplete="off" ngModel required />
+    </div>
+  </div>
 
-  <input type="hidden" name="ProductDescription" placeholder="Product Descrption" ngModel />
+  <div class="form-group form-row col-md-12">
+    <div class="form-group col-md-6">
+      <label>Brand</label>
+      <input class="form-control" type="text" name="ProductBrand" placeholder="Product Brand" autocomplete="off" ngModel required />
+    </div>
+  </div>
 
-  <li *ngFor="let descrption of DescrptionView">
-    {{descrption}}
-  </li>
 
-  <form #d=ngForm>
-    <input type="text" name="property" placeholder="Property" ngModel required />
-    <input type="text" name="value" placeholder="Value" ngModel required />
-    <button type="submit" (click)="addDescription(d)" [disabled]="!d.valid">Add</button>
-  </form>
+  <div class="form-group form-row col-md-12">
+    <label>Gender Type</label>
+    <div class="form-group col-md-1">
+      <input type="radio" name="ProductGenderType" value="Male" ngModel checked> Male
+    </div>
+    <div class="form-group col-md-1">
+      <input  type="radio" name="ProductGenderType" value="Female" ngModel> Female
+    </div>
+    <div class="form-group col-md-1">
+      <input type="radio" name="ProductGenderType" value="Neutral" ngModel> Neutral
+    </div>
+  </div>
+      <input type="hidden" name="ProductDescription" placeholder="Product Descrption" autocomplete="off" ngModel />
+  
+      <li *ngFor="let descrption of DescrptionView">
+        {{descrption}}
+      </li>
 
-  <input type="hidden" name="Seller_ID" ngModel />
-  <button type="submit" value="submit" [disabled]="!f.valid">Add Product</button>
+      <form #d=ngForm>
+        <div class="form-group form-row col-md-12">
+          <div class="form-group col-md-4">
+            <label>Property</label>
+            <input class="form-control" type="text" name="property" placeholder="Property" autocomplete="off" ngModel required />
+          </div>
+          <div class="form-group col-md-4">
+            <label>Value</label>
+            <input class="form-control" type="text" name="value" placeholder="Value" autocomplete="off" ngModel required />
+          </div>
+          <div class="form-group col-md-4">
+            <label>*</label>
+            <button class="form-control btn btn-info" type="submit" (click)="addDescription(d)" [disabled]="!d.valid">Add Property</button>
+          </div>
+        </div>
+
+      </form>
+
+      <input type="hidden" name="Seller_ID" ngModel />
+      <div class="form-group form-row col-md-12">
+        <div class="form-group col-md-12">
+          <button class="form-control btn btn-success" type="submit" value="submit" [disabled]="!f.valid">Add Product</button>
+        </div>
+      </div>
 </form>
+
+
+<br /><br /><br />

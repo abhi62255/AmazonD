@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AmazonDream.BLL;
 using AmazonDream.ViewModels;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,6 +23,7 @@ namespace AmazonDream.Api.Controllers.Customer
         }
 
         [HttpGet("{id}")]
+        [Authorize(Roles = "Customer")]
         public List<ProductModel> GetSuggestedProductsKnownUser(long id)            //for Known user
         {
             return obj.GetSuggestedProductsKnownUser(id);

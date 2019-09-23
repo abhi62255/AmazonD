@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NotificationService } from 'src/app/Services/notification.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
@@ -8,7 +9,7 @@ import { NotificationService } from 'src/app/Services/notification.service';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(private _notificationService: NotificationService) { }
+  constructor(private _notificationService: NotificationService, private router: Router) { }
 
   public Name: string;
 
@@ -20,6 +21,12 @@ export class HomePageComponent implements OnInit {
   }
   
   ngOnInit() {
+    if (localStorage.getItem("Seller_ID")) {
+      this.router.navigate(['SellerHome']);
+    }
+    if (localStorage.getItem("Admin")) {
+      this.router.navigate(['AdminHome']);
+    }
 
   }
 

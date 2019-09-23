@@ -68,3 +68,19 @@ D:\Sagar Rout\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonD
 D:\Sagar Rout\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.csproj.CopyComplete
 D:\Sagar Rout\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.dll
 D:\Sagar Rout\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.pdb
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.DAL.deps.json
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.DAL.dll
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.DAL.pdb
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Common.dll
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Entities.dll
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Common.pdb
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\AmazonDream.Entities.pdb
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.DAL\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.csprojAssemblyReference.cache
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.csproj.CoreCompileInputs.cache
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.AssemblyInfoInputs.cache
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.AssemblyInfo.cs
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.csproj.CopyComplete
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.dll
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.DAL\obj\Debug\netcoreapp2.1\AmazonDream.DAL.pdb

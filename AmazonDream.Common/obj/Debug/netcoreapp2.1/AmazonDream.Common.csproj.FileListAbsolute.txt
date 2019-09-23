@@ -43,3 +43,12 @@ D:\Sagar Rout\AmazonDream-master\AmazonDream.Common\obj\Debug\netcoreapp2.1\Amaz
 D:\Sagar Rout\AmazonDream-master\AmazonDream.Common\obj\Debug\netcoreapp2.1\AmazonDream.Common.AssemblyInfo.cs
 D:\Sagar Rout\AmazonDream-master\AmazonDream.Common\obj\Debug\netcoreapp2.1\AmazonDream.Common.dll
 D:\Sagar Rout\AmazonDream-master\AmazonDream.Common\obj\Debug\netcoreapp2.1\AmazonDream.Common.pdb
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.Common\bin\Debug\netcoreapp2.1\AmazonDream.Common.deps.json
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.Common\bin\Debug\netcoreapp2.1\AmazonDream.Common.dll
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.Common\bin\Debug\netcoreapp2.1\AmazonDream.Common.pdb
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.Common\obj\Debug\netcoreapp2.1\AmazonDream.Common.csprojAssemblyReference.cache
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.Common\obj\Debug\netcoreapp2.1\AmazonDream.Common.csproj.CoreCompileInputs.cache
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.Common\obj\Debug\netcoreapp2.1\AmazonDream.Common.AssemblyInfoInputs.cache
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.Common\obj\Debug\netcoreapp2.1\AmazonDream.Common.AssemblyInfo.cs
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.Common\obj\Debug\netcoreapp2.1\AmazonDream.Common.dll
+C:\Users\asharma1\Desktop\AmazonDream-master\AmazonDream.Common\obj\Debug\netcoreapp2.1\AmazonDream.Common.pdb

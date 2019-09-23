@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.Models\\AmazonDream.ViewModels.csproj",
+      "projectUniqueName": "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.Models\\AmazonDream.ViewModels.csproj",
       "projectName": "AmazonDream.ViewModels",
-      "projectPath": "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.Models\\AmazonDream.ViewModels.csproj",
+      "projectPath": "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.Models\\AmazonDream.ViewModels.csproj",
       "packagesPath": "C:\\Users\\asharma1\\.nuget\\packages\\",
-      "outputPath": "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.Models\\obj\\",
+      "outputPath": "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

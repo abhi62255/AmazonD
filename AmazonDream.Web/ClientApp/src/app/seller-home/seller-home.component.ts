@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-seller-home',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SellerHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    if (localStorage.getItem("Admin")) {
+      this.router.navigate(['AdminHome']);
+    }
+    if (localStorage.getItem("Customer_ID")) {
+      this.router.navigate(['HomePage/Product']);
+    }
   }
 
 }

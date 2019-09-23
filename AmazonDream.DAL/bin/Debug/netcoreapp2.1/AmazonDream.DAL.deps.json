@@ -11,7 +11,8 @@
           "AmazonDream.Common": "1.0.0",
           "AmazonDream.Entities": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.0",
-          "System.Net.Http": "4.3.4"
+          "System.Net.Http": "4.3.4",
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.1.1.0"
         },
         "runtime": {
           "AmazonDream.DAL.dll": {}
@@ -891,6 +892,14 @@
         "runtime": {
           "AmazonDream.Entities.dll": {}
         }
+      },
+      "Microsoft.AspNetCore.Mvc.Abstractions/2.1.1.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Mvc.Abstractions.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.18157"
+          }
+        }
       }
     }
   },
@@ -1481,6 +1490,11 @@
     },
     "AmazonDream.Entities/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Mvc.Abstractions/2.1.1.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

@@ -5185,11 +5185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.BLL\\AmazonDream.BLL.csproj",
+      "projectUniqueName": "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.BLL\\AmazonDream.BLL.csproj",
       "projectName": "AmazonDream.BLL",
-      "projectPath": "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.BLL\\AmazonDream.BLL.csproj",
+      "projectPath": "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.BLL\\AmazonDream.BLL.csproj",
       "packagesPath": "C:\\Users\\asharma1\\.nuget\\packages\\",
-      "outputPath": "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.BLL\\obj\\",
+      "outputPath": "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5208,17 +5208,17 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.Common\\AmazonDream.Common.csproj": {
-              "projectPath": "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.Common\\AmazonDream.Common.csproj"
+            "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.Common\\AmazonDream.Common.csproj": {
+              "projectPath": "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.Common\\AmazonDream.Common.csproj"
             },
-            "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.DAL\\AmazonDream.DAL.csproj": {
-              "projectPath": "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.DAL\\AmazonDream.DAL.csproj"
+            "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.DAL\\AmazonDream.DAL.csproj": {
+              "projectPath": "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.DAL\\AmazonDream.DAL.csproj"
             },
-            "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.Entities\\AmazonDream.Entities.csproj": {
-              "projectPath": "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.Entities\\AmazonDream.Entities.csproj"
+            "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.Entities\\AmazonDream.Entities.csproj": {
+              "projectPath": "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.Entities\\AmazonDream.Entities.csproj"
             },
-            "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.Models\\AmazonDream.ViewModels.csproj": {
-              "projectPath": "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.Models\\AmazonDream.ViewModels.csproj"
+            "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.Models\\AmazonDream.ViewModels.csproj": {
+              "projectPath": "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.Models\\AmazonDream.ViewModels.csproj"
             }
           }
         }

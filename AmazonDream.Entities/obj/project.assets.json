@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.Entities\\AmazonDream.Entities.csproj",
+      "projectUniqueName": "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.Entities\\AmazonDream.Entities.csproj",
       "projectName": "AmazonDream.Entities",
-      "projectPath": "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.Entities\\AmazonDream.Entities.csproj",
+      "projectPath": "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.Entities\\AmazonDream.Entities.csproj",
       "packagesPath": "C:\\Users\\asharma1\\.nuget\\packages\\",
-      "outputPath": "D:\\Sagar Rout\\AmazonDream-master\\AmazonDream.Entities\\obj\\",
+      "outputPath": "C:\\Users\\asharma1\\Desktop\\AmazonDream-master\\AmazonDream.Entities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

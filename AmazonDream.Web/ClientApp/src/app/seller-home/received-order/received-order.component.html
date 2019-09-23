@@ -4,9 +4,9 @@
     <div class="col-md-12">
       <div class="card-body">
         <h5 class="card-title">{{order.productName}}</h5>
-        <p class="card-text"><small>Order No. : {{order.orderNumber}}</small></p>
-        <p class="card-text">Amount : {{order.amount }} </p>
-        <p class="card-text">Date - Time : {{order.dateTime }} </p>
+          <p class="card-text"><small>Order No. : {{order.orderNumber}}</small></p>
+          <p class="card-text">Amount : {{order.amount }} </p>
+          <p class="card-text">Date - Time : {{order.dateTime }} </p>
         <p class="card-text">Address : {{order.address }} </p>
         <p class="card-text">Payment Mode : {{order.paymentType }} </p>
         <p class="card-text">Order Status : {{order.status}} </p>
@@ -14,7 +14,7 @@
 
 
         <form (ngSubmit)="updateStatus(f,order.id)" #f=ngForm>
-          <input class="form-control" type="text" name="status" placeholder="Order Status" ngModel /><br />
+          <input class="form-control" type="text" name="status" placeholder="Order Status" autocomplete="off" ngModel /><br />
           <button type="submit" value="Update" class=" btn btn-success">Update Status</button>
         </form>
       </div>
