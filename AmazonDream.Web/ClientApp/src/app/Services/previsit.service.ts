@@ -18,7 +18,7 @@ export class PrevisitService {
 
   addPrevisit() {
     console.log("Previsitsddddddddddddd");
-    return this.http.post(this._constant.baseUrl + 'previsit/' + localStorage.getItem("Customer_ID") + '/' + localStorage.getItem("Product_ID"), null, { headers: this.headers.headers });    //add previsit
+      return this.http.post(this._constant.baseUrl + 'previsit/' + localStorage.getItem("Customer_ID") + '/' + localStorage.getItem("Product_ID"), null, { headers: this.headers.headers });    //add previsit
   }
   getPrevisit(): Observable<any> {
     return this.http.get(this._constant.baseUrl + 'previsit/' + localStorage.getItem("Customer_ID"), { headers: this.headers.headers });    //add previsit

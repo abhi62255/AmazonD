@@ -2,6 +2,7 @@
 using AmazonDream.Entities;
 using AmazonDream.ViewModels;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -146,6 +147,25 @@ namespace AmazonDream.BLL
             return _productAndKartList;
 
 
+        }
+
+
+        public void removeInKartValues()            //remove unneccesry values from kart
+        {
+            //making quantity 0 in kart to relese products to sale
+            var modelK = obj.GetWholeKart();
+            foreach (var kartProduct in modelK)
+            {
+                var timeDifference = DateTime.Now.Subtract(kartProduct.DateTime).TotalMinutes;
+                if (timeDifference >= 120)       //if difference is 2 Hour or more
+                {
+                    var product = _productDA.GetProduct(kartProduct.Product_ID);
+                    product.ProductQuantityInKart -= kartProduct.Quantity;
+                    kartProduct.Quantity = 0;
+                    obj.UpdateKart(kartProduct, product);
+
+                }
+            }
         }
 
 

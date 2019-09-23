@@ -16,6 +16,8 @@ namespace AmazonDream.BLL
             _mapper = mapper;
         }
         PreVisitDA _preVisitDA = new PreVisitDA();
+        ProductDA _productDA = new ProductDA();
+        SellerDA _sellerDA = new SellerDA();
 
 
         public List<ProductModel> GetPrevisitedProducts(long id)            //returning list of productModel
@@ -25,7 +27,13 @@ namespace AmazonDream.BLL
 
             foreach(var product in listProduct)
             {
+                
                 var productmodel = _mapper.Map<Product, ProductModel>(product);
+
+                var seller = _sellerDA.GetSellerByID(product.Seller_ID);
+                productmodel.SellerName = seller.Name;
+                productmodel.PicturePath = _productDA.GetSingleProductPicture(product.ID);
+
                 listProductModel.Add(productmodel);
             }
             return listProductModel;

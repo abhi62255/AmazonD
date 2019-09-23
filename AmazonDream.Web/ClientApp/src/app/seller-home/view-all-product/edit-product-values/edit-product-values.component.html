@@ -1,4 +1,4 @@
-<p>edit-product-values works!</p>
+<p>Edit Product Values</p>
 <form (ngSubmit)="updateValues(f)" #f=ngForm>
   <input type="hidden" name="ID" />
 
@@ -7,12 +7,12 @@
     <input class="form-control" type="number" name="ProductPrice" placeholder="Product Price" ngModel />
   </div>
   <div class="form-group col-md-12">
-    <label for="inputCity">Product Price</label>
+    <label for="inputCity">Product Quantity</label>
     <input class="form-control" type="number" name="ProductQuantity" placeholder="Product Quantity" ngModel />
   </div>
   <div class="form-group col-md-12">
-    <label for="inputCity">Product Price</label>
+    <label for="inputCity">Product Discount</label>
     <input class="form-control" type="number" name="ProductDiscount" placeholder="Product Discount" ngModel />
   </div>
-  <button type="submit" value="Update">Update</button>
+  <button class="form-control btn btn-success" type="submit" value="Update">Update</button>
 </form>

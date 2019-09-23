@@ -1,8 +1,13 @@
-<p>login</p>
 <form (ngSubmit)="loginF(f)" #f=ngForm>
-  <input type="email" name="Email" placeholder="Email" ngModel />
-  <input type="password" name="Password" placeholder="Password" ngModel />
-  <button type="submit" value="Login">Login</button>
+  <div class="container">
+    <div>
+      <span>Login</span><br />
+      <span>Welcome To AmazonDream </span>
+    </div>
+    <input type="email" name="Email" placeholder="Email" ngModel required email />
+    <input type="password" name="Password" placeholder="Password" ngModel required />
+    <button type="submit" value="Login" [disabled]="!f.valid">Login</button>
+    <button type="button" routerLink="../CustomerRegistration">Need An Account !!!</button>
+  </div>
 </form>
-<button type="button" routerLink="../CustomerRegistration">Signup</button>
 

@@ -67,12 +67,14 @@ namespace AmazonDream.Api.Controllers.Common
         {
             var value = obj.login(model.Email, model.Password);
 
-            string[] user = value.Split(",");
+            if (value != null)
+            {
+                string[] user = value.Split(",");
 
-            var token = generateToken(user[0]);
-            value += "," + token;
+                var token = generateToken(user[0]);
+                value += "," + token;
 
-
+            }
 
 
             return Newtonsoft.Json.JsonConvert.SerializeObject(value);

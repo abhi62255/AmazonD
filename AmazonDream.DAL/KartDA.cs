@@ -109,5 +109,10 @@ namespace AmazonDream.DAL
             return true;
         }
 
+        public List<Kart> GetWholeKart()
+        {
+            return db.Kart.ToList();
+        }
+
     }
 }

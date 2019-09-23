@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AmazonDream.BLL;
 using AmazonDream.ViewModels;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

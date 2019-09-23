@@ -22,11 +22,9 @@ export class LoginComponent implements OnInit {
         this.user = <string><any>responseData;
         if (this.user != null) {
           this.user = this.user.split(",");       //Seperating user and ID from response
-          console.log(this.user[0] + ' ' + this.user[1]);
+          localStorage.setItem("Token", this.user[2]);
         }
 
-        console.log(this.user[2]);
-        localStorage.setItem("Token", this.user[2]);
         localStorage.removeItem("Seller_ID");
         localStorage.removeItem("Customer_ID");
         if (this.user == null) {

@@ -4,12 +4,12 @@
       <span>Customer Registration</span><br />
       <span>Welcome To AmazonDream Family</span>
     </div>
-    <input type="text" name="Name" placeholder="Name" ngModel />
-    <input type="email" name="Email" placeholder="Email" ngModel />
-    <input type="password" name="Password" placeholder="Password" ngModel />
-    <input type="password" name="ConfirmPassword" placeholder="ConfirmPassword" ngModel />
-    <input type="text" name="Gender" placeholder="Gender" ngModel />
-    <button type="submit" value="Register">Join Amazon Dream</button>
-    <button type="button" routerLink="../Login">Already Have an Account!!!</button>
+    <input type="text" name="Name" placeholder="Name" ngModel required/>
+    <input type="email" name="Email" placeholder="Email" ngModel required/>
+    <input type="password" name="Password" placeholder="Password" ngModel required/>
+    <input type="password" name="ConfirmPassword" placeholder="ConfirmPassword" ngModel required />
+    <input type="text" name="Gender" placeholder="Gender" ngModel required/>
+    <button type="submit" value="Register" [disabled]="!f.valid">Join Amazon Dream</button>
+    <button type="button" routerLink="../Login">Already Have an Account !!!</button>
   </div>
 </form>

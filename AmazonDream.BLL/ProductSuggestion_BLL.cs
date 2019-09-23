@@ -19,6 +19,7 @@ namespace AmazonDream.BLL
         ProductDA _productDA = new ProductDA();
         WishlistDA _wishlistDA = new WishlistDA();
         SellerDA _sellerDA = new SellerDA();
+        KartDA _kartDA = new KartDA();
 
         List<ProductModel> suggestedProductsList = new List<ProductModel>();
 
@@ -57,6 +58,7 @@ namespace AmazonDream.BLL
 
         public List<ProductModel> GetProducts()                         //get product for all user 
         {
+            removeInKartValues();
             var products = _productDA.GetProductByProductStatus("Accepted");
             var productList = new List<ProductModel>();
             foreach(var product in products)
@@ -148,6 +150,24 @@ namespace AmazonDream.BLL
             return pictureList;
         }
 
+
+        public void removeInKartValues()            //remove unneccesry values from kart
+        {
+            //making quantity 0 in kart to relese products to sale
+            var modelK = _kartDA.GetWholeKart();
+            foreach (var kartProduct in modelK)
+            {
+                var timeDifference = DateTime.Now.Subtract(kartProduct.DateTime).TotalMinutes;
+                if (timeDifference >= 120)       //if difference is 2 Hour or more
+                {
+                    var product = _productDA.GetProduct(kartProduct.Product_ID);
+                    product.ProductQuantityInKart -= kartProduct.Quantity;
+                    kartProduct.Quantity = 0;
+                    _kartDA.UpdateKart(kartProduct, product);
+
+                }
+            }
+        }
 
     }
 }

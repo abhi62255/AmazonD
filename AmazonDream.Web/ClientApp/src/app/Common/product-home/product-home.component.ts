@@ -25,7 +25,9 @@ export class ProductHomeComponent implements OnInit {
 
 
   getProductDetails() {
-    this._previsit.addPrevisit().subscribe();
+    if (localStorage.getItem("Customer_ID")) {          //add product to previst if Customer is login
+      this._previsit.addPrevisit().subscribe();
+    }                          
     this._product.getProductDetails()
       .subscribe((data: any) => {
         this.product = data

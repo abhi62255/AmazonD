@@ -17,6 +17,7 @@ namespace AmazonDream.BLL
         }
         WishlistDA _wishlistDA = new WishlistDA();
         ProductDA _productDA = new ProductDA();
+        SellerDA _sellerDA = new SellerDA();
 
 
 
@@ -42,6 +43,9 @@ namespace AmazonDream.BLL
                 var product = _productDA.GetProduct(wish.Product_ID);           //finding product by product ID
                 var modelP = _mapper.Map<Product, ProductModel>(product);       //converting product to productModel   
                 modelP.Seller_ID = wish.ID;             //assign wish id to seller ID(need to change it later)
+                var seller = _sellerDA.GetSellerByID(product.Seller_ID);
+                modelP.SellerName = seller.Name;
+                modelP.PicturePath = _productDA.GetSingleProductPicture(product.ID);
                 productList.Add(modelP);
             }
             return productList;

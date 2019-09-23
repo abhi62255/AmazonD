@@ -34,7 +34,7 @@
 
 Total Amount:{{TotalAmount}}<br />
 
-<button (click)="next()" class=" btn btn-primary">Add Address</button>
+<button (click)="next()" class=" btn btn-primary" *ngIf="TotalAmount">Add Address</button>
 <button (click)="clearKart()" class=" btn btn-danger">Clear Kart</button>
 
 <router-outlet></router-outlet>

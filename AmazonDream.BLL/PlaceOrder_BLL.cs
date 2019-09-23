@@ -39,6 +39,8 @@ namespace AmazonDream.BLL
 
             foreach (var k in modelK)
             {
+                if (k.Quantity == 0)
+                    continue;
 
                 //common start
                 var order = new PlacedOrder();
